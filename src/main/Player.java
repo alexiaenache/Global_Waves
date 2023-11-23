@@ -137,15 +137,15 @@ public class Player {
         node.put("message", message);
         this.output.add(node);
         }
-        public void addOutputStatusMapper(UserClass user, String selectedSearch, int remainedTime, String repeatMessage) {
+        public void addOutputStatusMapper(UserClass user, String name, int remainedTime, String repeatMessage) {
             ObjectNode node = this.mapper.createObjectNode();
             node.put("command", "status");
             node.put("user", user.getUsername());
             node.put("timestamp", user.getLastTimestamp());
             if(remainedTime == 0)
-                selectedSearch = "";
+                name = "";
             ObjectNode statsNode = this.mapper.createObjectNode();
-            statsNode.put("name", selectedSearch);
+            statsNode.put("name", name);
             statsNode.put("remainedTime", remainedTime);
             statsNode.put("repeat", repeatMessage);
             statsNode.put("shuffle", user.isShuffle());

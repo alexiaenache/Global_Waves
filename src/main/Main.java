@@ -73,7 +73,7 @@ public final class Main {
      */
     public static void action(final String filePathInput,
                               final String filePathOutput) throws IOException {
-        if(!filePathInput.equals("test05_playPause_playlist_podcast.json")) return;
+//        if(!filePathInput.equals("test05_playPause_playlist_podcast.json")) return;
         ObjectMapper objectMapper = new ObjectMapper();
         LibraryInput library = objectMapper.readValue(new File(LIBRARY_PATH), LibraryInput.class);
         ArrayNode outputs = objectMapper.createArrayNode();

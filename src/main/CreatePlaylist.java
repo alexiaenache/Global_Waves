@@ -36,6 +36,7 @@ public class CreatePlaylist extends Command{
             playlist.setPublic(true);
             playlist.setOwner(user.getUsername());
             playlist.setFollowers(0);
+            playlist.setDuration(0);
             if (user.getPlaylists() == null) {
                 user.setPlaylists(new ArrayList<>());
             }

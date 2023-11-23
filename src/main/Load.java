@@ -1,5 +1,7 @@
 package main;
 
+import fileio.input.EpisodeInput;
+import fileio.input.PodcastInput;
 import fileio.input.SongInput;
 
 import java.util.ArrayList;
@@ -39,13 +41,46 @@ public class Load extends Command {
             } else {
                 user.setRemainedTime(s.getDuration());
             }
-        } else if(user.getSearchedPodcasts() != null && !user.getSearchedPodcasts().isEmpty()) {
+        }
+        else if(user.getSearchedPodcasts() != null && !user.getSearchedPodcasts().isEmpty()) {
+            ArrayList<PodcastInput> podcasts = user.getSearchedPodcasts();
+            PodcastInput p = null;
+            for (PodcastInput podcast : podcasts) {
+                if (podcast.getName().equals(user.getSelectedSearch())) {
+                    p = podcast;
+                }
+            }
+            if(p != null)
+                user.setLoadedPodcast(p);
             user.setLastPlay(Integer.valueOf(getTimestamp()));
             user.setPaused(false);
-            user.setRemainedTime(user.getLoadedPodcast().getDuration());
+            if(user.getLoadedPodcast() == null)
+                return;
+            ArrayList<EpisodeInput> episodes = user.getLoadedPodcast().getEpisodes();
+            int d = 0;
+                for(EpisodeInput episode : episodes) {
+                    d += episode.getDuration();
+                }
+                if(p != null) {
+                    user.setLoadedPodcast(p);
+                }
+
+            user.setRemainedTime(d);
         } else if(user.getSearchedPlaylists() != null && !user.getSearchedPlaylists().isEmpty()) {
+            ArrayList<Playlist> playlists = user.getSearchedPlaylists();
+            Playlist p = null;
+            for (Playlist playlist : playlists) {
+                if (playlist.getName().equals(user.getSelectedSearch())) {
+                    p = playlist;
+                }
+            }
+            if(p != null) {
+                user.setLoadedPlaylist(p);
+            }
             user.setLastPlay(Integer.valueOf(getTimestamp()));
             user.setPaused(false);
+            if(user.getLoadedPlaylist() == null)
+                return;
             user.setRemainedTime(user.getLoadedPlaylist().getDuration());
         }
         player.addOutputLoadMapper(user);

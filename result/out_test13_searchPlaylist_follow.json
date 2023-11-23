@@ -7,13 +7,13 @@
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 170,
-  "message" : "Search returned 4 results",
-  "results" : [ "Stairway to Heaven", "Black Dog", "Whole Lotta Love", "Good Times Bad Times" ]
+  "message" : "Search returned 5 results",
+  "results" : [ "Start Me Up", "Black Dog", "Paint It Black", "Gimme Shelter", "Bohemian Rhapsody" ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 190,
-  "message" : "Successfully selected Stairway to Heaven."
+  "message" : "Successfully selected Start Me Up."
 }, {
   "command" : "load",
   "user" : "bob35",
@@ -25,6 +25,42 @@
   "timestamp" : 240,
   "message" : "Successfully added to playlist."
 }, {
+  "command" : "select",
+  "user" : "bob35",
+  "timestamp" : 290,
+  "message" : "Successfully selected Start Me Up."
+}, {
+  "command" : "load",
+  "user" : "bob35",
+  "timestamp" : 300,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "addRemoveInPlaylist",
+  "user" : "bob35",
+  "timestamp" : 340,
+  "message" : "Successfully removed from playlist."
+}, {
+  "command" : "search",
+  "user" : "bob35",
+  "timestamp" : 370,
+  "message" : "Search returned 5 results",
+  "results" : [ "Start Me Up", "Black Dog", "Paint It Black", "Gimme Shelter", "Bohemian Rhapsody" ]
+}, {
+  "command" : "select",
+  "user" : "bob35",
+  "timestamp" : 390,
+  "message" : "Successfully selected Start Me Up."
+}, {
+  "command" : "load",
+  "user" : "bob35",
+  "timestamp" : 400,
+  "message" : "Playback loaded successfully."
+}, {
+  "command" : "addRemoveInPlaylist",
+  "user" : "bob35",
+  "timestamp" : 440,
+  "message" : "Successfully added to playlist."
+}, {
   "command" : "createPlaylist",
   "user" : "bob35",
   "timestamp" : 450,
@@ -34,12 +70,12 @@
   "user" : "bob35",
   "timestamp" : 470,
   "message" : "Search returned 5 results",
-  "results" : [ "Shape of You", "Don't", "Money Trees", "Whatever You Need", "Maps" ]
+  "results" : [ "Start Me Up", "Black Dog", "Paint It Black", "Gimme Shelter", "Bohemian Rhapsody" ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 490,
-  "message" : "Successfully selected Shape of You."
+  "message" : "Successfully selected Start Me Up."
 }, {
   "command" : "load",
   "user" : "bob35",
@@ -55,12 +91,12 @@
   "user" : "bob35",
   "timestamp" : 570,
   "message" : "Search returned 5 results",
-  "results" : [ "Stairway to Heaven", "Under Pressure", "Dream On", "The Unforgiven", "Start Me Up" ]
+  "results" : [ "Start Me Up", "Black Dog", "Paint It Black", "Gimme Shelter", "Bohemian Rhapsody" ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 590,
-  "message" : "Successfully selected Stairway to Heaven."
+  "message" : "Successfully selected Start Me Up."
 }, {
   "command" : "load",
   "user" : "bob35",
@@ -70,7 +106,7 @@
   "command" : "addRemoveInPlaylist",
   "user" : "bob35",
   "timestamp" : 640,
-  "message" : "Successfully added to playlist."
+  "message" : "Successfully removed from playlist."
 }, {
   "command" : "createPlaylist",
   "user" : "carol19",
@@ -81,12 +117,12 @@
   "user" : "carol19",
   "timestamp" : 870,
   "message" : "Search returned 5 results",
-  "results" : [ "Shape of You", "Don't", "Money Trees", "Dream On", "The Unforgiven" ]
+  "results" : [ "Start Me Up", "Black Dog", "Paint It Black", "Gimme Shelter", "Bohemian Rhapsody" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 890,
-  "message" : "Successfully selected Shape of You."
+  "message" : "Successfully selected Start Me Up."
 }, {
   "command" : "load",
   "user" : "carol19",
@@ -99,49 +135,84 @@
   "message" : "Successfully added to playlist."
 }, {
   "command" : "search",
-  "user" : "emily30",
+  "user" : "carol19",
   "timestamp" : 1000,
-  "message" : "Search returned 1 results",
-  "results" : [ "The Michelle Obama Podcast" ]
-}, {
-  "command" : "select",
-  "user" : "emily30",
-  "timestamp" : 1190,
-  "message" : "Successfully selected The Michelle Obama Podcast."
-}, {
-  "command" : "search",
-  "user" : "carol19",
-  "timestamp" : 1270,
-  "message" : "Search returned 1 results",
-  "results" : [ "The Man" ]
-}, {
-  "command" : "select",
-  "user" : "carol19",
-  "timestamp" : 1290,
-  "message" : "Successfully selected The Man."
-}, {
-  "command" : "search",
-  "user" : "carol19",
-  "timestamp" : 1400,
   "message" : "Search returned 1 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "carol19",
-  "timestamp" : 1410,
+  "timestamp" : 1010,
   "message" : "Please conduct a search before making a selection."
 }, {
   "command" : "showPlaylists",
   "user" : "bob35",
-  "timestamp" : 1460,
+  "timestamp" : 1060,
   "result" : [ {
     "name" : "My first playlist",
-    "songs" : [ "Stairway to Heaven" ],
+    "songs" : [ "Start Me Up" ],
     "visibility" : "public",
     "followers" : 0
   }, {
     "name" : "My second playlist",
-    "songs" : [ "Shape of You", "Stairway to Heaven" ],
+    "songs" : [ ],
+    "visibility" : "public",
+    "followers" : 0
+  } ]
+}, {
+  "command" : "showPlaylists",
+  "user" : "carol19",
+  "timestamp" : 1100,
+  "result" : [ {
+    "name" : "The best",
+    "songs" : [ "Start Me Up" ],
+    "visibility" : "public",
+    "followers" : 0
+  } ]
+}, {
+  "command" : "showPlaylists",
+  "user" : "bob35",
+  "timestamp" : 1160,
+  "result" : [ {
+    "name" : "My first playlist",
+    "songs" : [ "Start Me Up" ],
+    "visibility" : "public",
+    "followers" : 0
+  }, {
+    "name" : "My second playlist",
+    "songs" : [ ],
+    "visibility" : "public",
+    "followers" : 0
+  } ]
+}, {
+  "command" : "search",
+  "user" : "david27",
+  "timestamp" : 1200,
+  "message" : "Search returned 0 results",
+  "results" : [ ]
+}, {
+  "command" : "select",
+  "user" : "david27",
+  "timestamp" : 1210,
+  "message" : "Please conduct a search before making a selection."
+}, {
+  "command" : "search",
+  "user" : "emily30",
+  "timestamp" : 1300,
+  "message" : "Search returned 0 results",
+  "results" : [ ]
+}, {
+  "command" : "select",
+  "user" : "emily30",
+  "timestamp" : 1310,
+  "message" : "Please conduct a search before making a selection."
+}, {
+  "command" : "showPlaylists",
+  "user" : "carol19",
+  "timestamp" : 1370,
+  "result" : [ {
+    "name" : "The best",
+    "songs" : [ "Start Me Up" ],
     "visibility" : "public",
     "followers" : 0
   } ]
@@ -151,70 +222,17 @@
   "timestamp" : 1500,
   "result" : [ {
     "name" : "The best",
-    "songs" : [ "Shape of You" ],
+    "songs" : [ "Start Me Up" ],
     "visibility" : "public",
     "followers" : 0
   } ]
 }, {
   "command" : "showPlaylists",
-  "user" : "bob35",
-  "timestamp" : 1560,
+  "user" : "carol19",
+  "timestamp" : 1600,
   "result" : [ {
-    "name" : "My first playlist",
-    "songs" : [ "Stairway to Heaven" ],
-    "visibility" : "public",
-    "followers" : 0
-  }, {
-    "name" : "My second playlist",
-    "songs" : [ "Shape of You", "Stairway to Heaven" ],
-    "visibility" : "public",
-    "followers" : 0
-  } ]
-}, {
-  "command" : "search",
-  "user" : "david27",
-  "timestamp" : 1680,
-  "message" : "Search returned 0 results",
-  "results" : [ ]
-}, {
-  "command" : "select",
-  "user" : "david27",
-  "timestamp" : 1710,
-  "message" : "Please conduct a search before making a selection."
-}, {
-  "command" : "search",
-  "user" : "david27",
-  "timestamp" : 1800,
-  "message" : "Search returned 0 results",
-  "results" : [ ]
-}, {
-  "command" : "select",
-  "user" : "david27",
-  "timestamp" : 1810,
-  "message" : "Please conduct a search before making a selection."
-}, {
-  "command" : "search",
-  "user" : "emily30",
-  "timestamp" : 1865,
-  "message" : "Search returned 0 results",
-  "results" : [ ]
-}, {
-  "command" : "select",
-  "user" : "emily30",
-  "timestamp" : 1870,
-  "message" : "Please conduct a search before making a selection."
-}, {
-  "command" : "showPlaylists",
-  "user" : "bob35",
-  "timestamp" : 1900,
-  "result" : [ {
-    "name" : "My first playlist",
-    "songs" : [ "Stairway to Heaven" ],
-    "visibility" : "public",
-    "followers" : 0
-  }, {
-    "name" : "My second playlist",
-    "songs" : [ "Shape of You", "Stairway to Heaven" ],
+    "name" : "The best",
+    "songs" : [ "Start Me Up" ],
     "visibility" : "public",
     "followers" : 0
   } ]

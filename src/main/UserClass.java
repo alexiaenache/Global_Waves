@@ -30,8 +30,17 @@ public class UserClass {
         private Playlist loadedPlaylist;
         private ArrayList<SongInput> likedSongs;
         private ArrayList<Playlist> playlists;
+        private Integer playedPodcastForTime = 0;
 
-        public ArrayList<UserClass> copyAllUsers(ArrayList<UserInput> users) {
+    public Integer getPlayedPodcastForTime() {
+        return playedPodcastForTime;
+    }
+
+    public void setPlayedPodcastForTime(Integer playedPodcastForTime) {
+        this.playedPodcastForTime = playedPodcastForTime;
+    }
+
+    public ArrayList<UserClass> copyAllUsers(ArrayList<UserInput> users) {
             ArrayList<UserClass> usersOutput = new ArrayList<>();
             for(int i = 0; i < users.size(); i++) {
                 usersOutput.get(i).setUsername(users.get(i).getUsername());

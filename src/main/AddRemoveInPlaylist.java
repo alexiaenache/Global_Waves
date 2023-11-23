@@ -53,6 +53,7 @@ public class AddRemoveInPlaylist extends  Command{
                         message = "Successfully removed from playlist.";
                     } else {
                         playlist.addSong(user.getLoadedSong());
+                        playlist.setDuration(playlist.getDuration() + user.getLoadedSong().getDuration());
                         message = "Successfully added to playlist.";
                     }
                 }
