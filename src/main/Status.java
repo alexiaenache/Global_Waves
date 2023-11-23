@@ -18,13 +18,14 @@ public class Status extends Command{
         String repeatMessage = null;
         String name = null;
         int remainedTime = 0;
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             if (this.getUsername().equals(player.getUsers().get(i).getUsername())) {
                 user = player.getUsers().get(i);
             }
         }
-            if (user == null)
+            if (user == null) {
                 return;
+            }
             user.setLastTimestamp(Integer.valueOf(this.getTimestamp()));
             if (user.isSuccessfullLoad()) {
                 if (user.getSearchedSongs() != null) {
@@ -34,7 +35,9 @@ public class Status extends Command{
                         if (song.getName().equals(user.getSelectedSearch())) {
                             select = song;
                             if (!user.isPaused()) {
-                                remainedTime = user.getRemainedTime() - (Integer.valueOf(this.getTimestamp()) - user.getLastPlay());
+                                int a = user.getRemainedTime();
+                                int b = Integer.valueOf(this.getTimestamp()) - user.getLastPlay();
+                                remainedTime = a - b;
                             } else {
                                 remainedTime = user.getRemainedTime();
                             }
@@ -58,7 +61,9 @@ public class Status extends Command{
                                 timePassedPodcast += user.getPlayedPodcastForTime() + 1;
                             }
                             if (!user.isPaused()) {
-                                timePassed = Integer.valueOf(this.getTimestamp()) - user.getLastPlay();
+                                int a = Integer.valueOf(this.getTimestamp());
+                                int b = user.getLastPlay();
+                                timePassed = a - b;
                             }
                             timePassedPodcast += timePassed;
                             for (EpisodeInput episode : podcast.getEpisodes()) {
@@ -74,7 +79,9 @@ public class Status extends Command{
                             if (currenteEpisode == null) {
                                 return;
                             }
-                            remainedTime = currenteEpisode.getDuration() - (timePassedPodcast - aux);
+                            int a = currenteEpisode.getDuration();
+                            int b = timePassedPodcast - aux;
+                            remainedTime = a - b;
                             user.setPlayedPodcastForTime(timePassedPodcast);
                         }
                     }
@@ -85,7 +92,9 @@ public class Status extends Command{
                         if (playlist.getName().equals(user.getSelectedSearch())) {
                             select = playlist;
                             if (!user.isPaused()) {
-                                remainedTime = user.getRemainedTime() - (Integer.valueOf(this.getTimestamp()) - user.getLastPlay());
+                                int a = user.getRemainedTime();
+                                int b = Integer.valueOf(this.getTimestamp()) - user.getLastPlay();
+                                remainedTime = a - b;
                             } else {
                                 remainedTime = user.getRemainedTime();
                             }

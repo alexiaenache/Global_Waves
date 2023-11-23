@@ -2,7 +2,7 @@ package main;
 
 import java.util.ArrayList;
 
-public class CreatePlaylist extends Command{
+public class CreatePlaylist extends Command {
     public void setCreatePlaylist(Command comm) {
         this.setCommand(comm.getCommand());
         this.setUsername(comm.getUsername());
@@ -13,13 +13,13 @@ public class CreatePlaylist extends Command{
         int n = player.getUsers().size();
         UserClass user = null;
 
-        for(int i = 0; i < n; i++) {
-            if(this.getUsername().equals(player.getUsers().get(i).getUsername())) {
+        for (int i = 0; i < n; i++) {
+            if (this.getUsername().equals(player.getUsers().get(i).getUsername())) {
                 user = player.getUsers().get(i);
             }
         }
         boolean found = false;
-        if(user.getPlaylists() != null) {
+        if (user.getPlaylists() != null) {
             ArrayList<Playlist> playlists = user.getPlaylists();
             for (Playlist playlist : playlists) {
                 if (playlist.getName().equals(this.getPlaylistName())) {
@@ -30,7 +30,7 @@ public class CreatePlaylist extends Command{
         }
         user.setLastTimestamp(Integer.valueOf(getTimestamp()));
         Playlist playlist = null;
-        if(!found) {
+        if (!found) {
             playlist = new Playlist();
             playlist.setName(this.getPlaylistName());
             playlist.setPublic(true);

@@ -42,7 +42,7 @@ public class UserClass {
 
     public ArrayList<UserClass> copyAllUsers(ArrayList<UserInput> users) {
             ArrayList<UserClass> usersOutput = new ArrayList<>();
-            for(int i = 0; i < users.size(); i++) {
+            for (int i = 0; i < users.size(); i++) {
                 usersOutput.get(i).setUsername(users.get(i).getUsername());
                 usersOutput.get(i).setAge(users.get(i).getAge());
                 usersOutput.get(i).setCity(users.get(i).getCity());
@@ -107,7 +107,7 @@ public class UserClass {
         return loadedSong;
     }
     public void addLikedSong(SongInput song) {
-        this.likedSongs.add(song);}
+        this.likedSongs.add(song); }
     public void removeLikedSong(SongInput song) {
         this.likedSongs.remove(song);
     }

@@ -15,16 +15,14 @@ public class Load extends Command {
     public void run(Player player) {
         int n = player.getUsers().size();
         UserClass user = null;
-        for(int i = 0; i < n; i++) {
-            if(this.getUsername().equals(player.getUsers().get(i).getUsername())) {
+        for (int i = 0; i < n; i++) {
+            if (this.getUsername().equals(player.getUsers().get(i).getUsername())) {
                 user = player.getUsers().get(i);
             }
 
         }
         user.setLastTimestamp(Integer.valueOf(getTimestamp()));
-//        if(user.getSelectedSearch() == null) {
-//        }
-        if(user.getSearchedSongs() != null && !user.getSearchedSongs().isEmpty()) {
+        if (user.getSearchedSongs() != null && !user.getSearchedSongs().isEmpty()) {
 
             ArrayList<SongInput> songs = user.getSearchedSongs();
             SongInput s = null;
@@ -42,7 +40,7 @@ public class Load extends Command {
                 user.setRemainedTime(s.getDuration());
             }
         }
-        else if(user.getSearchedPodcasts() != null && !user.getSearchedPodcasts().isEmpty()) {
+        else if (user.getSearchedPodcasts() != null && !user.getSearchedPodcasts().isEmpty()) {
             ArrayList<PodcastInput> podcasts = user.getSearchedPodcasts();
             PodcastInput p = null;
             for (PodcastInput podcast : podcasts) {
@@ -50,23 +48,24 @@ public class Load extends Command {
                     p = podcast;
                 }
             }
-            if(p != null)
+            if (p != null) {
                 user.setLoadedPodcast(p);
+            }
             user.setLastPlay(Integer.valueOf(getTimestamp()));
             user.setPaused(false);
-            if(user.getLoadedPodcast() == null)
+            if (user.getLoadedPodcast() == null)
                 return;
             ArrayList<EpisodeInput> episodes = user.getLoadedPodcast().getEpisodes();
             int d = 0;
-                for(EpisodeInput episode : episodes) {
+                for (EpisodeInput episode : episodes) {
                     d += episode.getDuration();
                 }
-                if(p != null) {
+                if (p != null) {
                     user.setLoadedPodcast(p);
                 }
 
             user.setRemainedTime(d);
-        } else if(user.getSearchedPlaylists() != null && !user.getSearchedPlaylists().isEmpty()) {
+        } else if (user.getSearchedPlaylists() != null && !user.getSearchedPlaylists().isEmpty()) {
             ArrayList<Playlist> playlists = user.getSearchedPlaylists();
             Playlist p = null;
             for (Playlist playlist : playlists) {
@@ -74,12 +73,12 @@ public class Load extends Command {
                     p = playlist;
                 }
             }
-            if(p != null) {
+            if (p != null) {
                 user.setLoadedPlaylist(p);
             }
             user.setLastPlay(Integer.valueOf(getTimestamp()));
             user.setPaused(false);
-            if(user.getLoadedPlaylist() == null)
+            if (user.getLoadedPlaylist() == null)
                 return;
             user.setRemainedTime(user.getLoadedPlaylist().getDuration());
         }

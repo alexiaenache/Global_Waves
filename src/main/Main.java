@@ -78,8 +78,7 @@ public final class Main {
         LibraryInput library = objectMapper.readValue(new File(LIBRARY_PATH), LibraryInput.class);
         ArrayNode outputs = objectMapper.createArrayNode();
 
-        // TODO add your implementation
-        ArrayList<Command> commands = objectMapper.readValue(new File("input/"+filePathInput), new TypeReference<ArrayList<Command>>(){});
+        ArrayList<Command> commands = objectMapper.readValue(new File("input/" + filePathInput), new TypeReference<ArrayList<Command>>(){ });
 
         ObjectMapper mapper = new ObjectMapper();
         Player p = new Player();
@@ -90,7 +89,7 @@ public final class Main {
         p.copyAllUsers(library.getUsers());
         Command c;
         for (int i = 0; i < commands.size(); i++) {
-            switch(commands.get(i).getCommand()) {
+            switch (commands.get(i).getCommand()) {
                 case "search":
                     c = new Search();
                     ((Search) c).setSearch(commands.get(i));

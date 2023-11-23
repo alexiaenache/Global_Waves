@@ -26,7 +26,7 @@ public class Player {
         this.lib = lib;
     }
     public void setSerchedSongsUser(String user, ArrayList<SongInput> songs, String timestamp) {
-        for(int i = 0; i < this.users.size(); i++) {
+        for (int i = 0; i < this.users.size(); i++) {
             if (this.users.get(i).getUsername().equals(user)) {
                 this.users.get(i).setSearchedSongs(songs);
                 this.users.get(i).removeSearchedPodcasts();
@@ -57,7 +57,7 @@ public class Player {
                 songNames.add(song.getName());
             }
             node.put("results", this.mapper.valueToTree(songNames));
-        } else if(user.getSearchedPodcasts() != null) {
+        } else if (user.getSearchedPodcasts() != null) {
             node.put("message", "Search returned " + user.getSearchedPodcasts().size() + " results");
             ArrayList<String> podcastNames = new ArrayList<>();
             for (PodcastInput podcast : user.getSearchedPodcasts()) {
@@ -73,12 +73,12 @@ public class Player {
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
         int no = 0;
-        if(user.getPlaylists() != null) {
+        if (user.getPlaylists() != null) {
             no = user.getPlaylists().size();
         }
         node.put("message", "Search returned " + no + " results");
         ArrayList<String> playlistNames = new ArrayList<>();
-        for(Playlist playlist : user.getSearchedPlaylists()) {
+        for (Playlist playlist : user.getSearchedPlaylists()) {
             playlistNames.add(playlist.getName());
         }
 //        System.out.println(playlistNames.size());
@@ -93,22 +93,22 @@ public class Player {
         node.put("timestamp", user.getLastTimestamp());
         String message;
         boolean isSongs, isPodcasts, isPlaylists;
-        if(user.getSearchedSongs() == null || user.getSearchedSongs().isEmpty()) {
+        if (user.getSearchedSongs() == null || user.getSearchedSongs().isEmpty()) {
             isSongs = false;
         } else {
             isSongs = true;
         }
-        if(user.getSearchedPodcasts() == null || user.getSearchedPodcasts().isEmpty()) {
+        if (user.getSearchedPodcasts() == null || user.getSearchedPodcasts().isEmpty()) {
             isPodcasts = false;
         } else {
             isPodcasts = true;
         }
-        if(user.getSearchedPlaylists() == null || user.getSearchedPlaylists().isEmpty()) {
+        if (user.getSearchedPlaylists() == null || user.getSearchedPlaylists().isEmpty()) {
             isPlaylists = false;
         } else {
             isPlaylists = true;
         }
-        if(isSongs || isPodcasts || isPlaylists) {
+        if (isSongs || isPodcasts || isPlaylists) {
             if (successfulSelect) {
                 message = "Successfully selected " + user.getSelectedSearch() + ".";
             } else {
@@ -126,7 +126,7 @@ public class Player {
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
         String message;
-        if(user.getSearchedSongs() == null && user.getSearchedPodcasts()==null) {
+        if (user.getSearchedSongs() == null && user.getSearchedPodcasts() == null) {
             message = "You can't load an empty audio collection!";
         } else if(!user.isSuccessfulSelect()) {
             message = "Please select a source before attempting to load.";
@@ -137,17 +137,18 @@ public class Player {
         node.put("message", message);
         this.output.add(node);
         }
-        public void addOutputStatusMapper(UserClass user, String name, int remainedTime, String repeatMessage) {
+        public void addOutputStatusMapper(UserClass user, String name, int remTime, String repM) {
             ObjectNode node = this.mapper.createObjectNode();
             node.put("command", "status");
             node.put("user", user.getUsername());
             node.put("timestamp", user.getLastTimestamp());
-            if(remainedTime == 0)
+            if (remTime == 0) {
                 name = "";
+            }
             ObjectNode statsNode = this.mapper.createObjectNode();
             statsNode.put("name", name);
-            statsNode.put("remainedTime", remainedTime);
-            statsNode.put("repeat", repeatMessage);
+            statsNode.put("remainedTime", remTime);
+            statsNode.put("repeat", repM);
             statsNode.put("shuffle", user.isShuffle());
             statsNode.put("paused", user.isPaused());
             node.set("stats", statsNode);
@@ -159,11 +160,11 @@ public class Player {
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
         String message = null;
-        if(!user.isSuccessfullLoad()) {
+        if (!user.isSuccessfullLoad()) {
             message = "Please load a source before attempting to pause or resume playback.";
-        } else if(user.isSuccessfullLoad() && user.isPaused()) {
+        } else if (user.isSuccessfullLoad() && user.isPaused()) {
             message = "Playback paused successfully.";
-        } else if(user.isSuccessfullLoad() && !user.isPaused()){
+        } else if (user.isSuccessfullLoad() && !user.isPaused()) {
             message = "Playback resumed successfully.";
         }
         node.put("message", message);
@@ -175,7 +176,7 @@ public class Player {
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
         String message = null;
-        if(!found) {
+        if (!found) {
             message = "Playlist created successfully.";
         } else {
             message = "A playlist with the same name already exists.";
@@ -197,7 +198,7 @@ public class Player {
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
         ArrayList<ObjectNode> results = new ArrayList<>();
-        for(Playlist playlist : user.getPlaylists()) {
+        for (Playlist playlist : user.getPlaylists()) {
             ObjectNode playlistNode = this.mapper.createObjectNode();
             playlistNode.put("name", playlist.getName());
             String type = "";
@@ -225,7 +226,7 @@ public class Player {
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
         ArrayList<String> results = new ArrayList<>();
-        if(user.getLikedSongs() != null) {
+        if (user.getLikedSongs() != null) {
             for (SongInput song : user.getLikedSongs()) {
                 results.add(song.getName());
             }
@@ -240,7 +241,7 @@ public class Player {
     }
     public void copyAllUsers(ArrayList<UserInput> users) {
         this.users = new ArrayList<>();
-        for(int i = 0; i < users.size(); i++) {
+        for (int i = 0; i < users.size(); i++) {
             this.users.add(new UserClass());
             this.users.get(i).setUsername(users.get(i).getUsername());
             this.users.get(i).setAge(users.get(i).getAge());

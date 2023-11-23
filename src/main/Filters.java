@@ -15,28 +15,28 @@ public class Filters {
 
     public int countInitializedFildes() {
         int count = 0;
-        if(this.name != null) {
+        if (this.name != null) {
             count++;
         }
-        if(this.album != null) {
+        if (this.album != null) {
             count++;
         }
-        if(this.owner != null) {
+        if (this.owner != null) {
             count++;
         }
-        if(this.lyrics != null) {
+        if (this.lyrics != null) {
             count++;
         }
-        if(this.genre != null) {
+        if (this.genre != null) {
             count++;
         }
-        if(this.releaseYear != null) {
+        if (this.releaseYear != null) {
             count++;
         }
-        if(this.artist != null) {
+        if (this.artist != null) {
             count++;
         }
-        if(this.tags != null) {
+        if (this.tags != null) {
             count++;
         }
         return count;

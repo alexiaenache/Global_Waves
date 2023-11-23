@@ -21,12 +21,12 @@ public class Like extends Command {
         user.setLastTimestamp(Integer.valueOf(getTimestamp()));
         String message = "";
         boolean found = false;
-        if(!user.isSuccessfullLoad()) {
+        if (!user.isSuccessfullLoad()) {
             message = "Please load a source before liking or unliking.";
-        } else if(user.getLoadedSong() == null) {
+        } else if (user.getLoadedSong() == null) {
             message = "Loaded source is not a song.";
         } else {
-            if(user.getLikedSongs() == null) {
+            if (user.getLikedSongs() == null) {
                 ArrayList<SongInput> songs = new ArrayList<>();
                 user.setLikedSongs(songs);
             } else {
@@ -36,16 +36,12 @@ public class Like extends Command {
                     }
                 }
             }
-                if(found) {
+                if (found) {
                     user.removeLikedSong(user.getLoadedSong());
                     message = "Unlike registered successfully.";
-                    System.out.println(user.getLikedSongs().get(0).getName() + " sterge");
-                    System.out.println(user.getLastTimestamp());
                 } else {
                     user.addLikedSong(user.getLoadedSong());
                     message = "Like registered successfully.";
-                    System.out.println(user.getLikedSongs().get(0).getName() + " adauga");
-                    System.out.println(user.getLastTimestamp());
                 }
 
         }

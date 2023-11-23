@@ -14,18 +14,16 @@ public class Search extends Command {
         this.setType(comm.getType());
         this.setFilters(comm.getFilters());
     }
-    public void resetSearch(Player player,String username) {
-        for(int i = 0; i < player.getUsers().size(); i++) {
-            if(player.getUsers().get(i).getUsername().equals(username)) {
+    public void resetSearch(Player player, String username) {
+        for (int i = 0; i < player.getUsers().size(); i++) {
+            if (player.getUsers().get(i).getUsername().equals(username)) {
                 UserClass user = player.getUsers().get(i);
-//                TODO: make serachedSOngs have 0 elments
 
                 user.setSearchedSongs(new ArrayList<>());
                 user.setSearchedPodcasts(new ArrayList<>());
                 user.setSearchedPlaylists(new ArrayList<>());
                 user.setSuccessfulSelect(false);
-                user.setSuccessfullLoad(false);;
-                user.setSuccessfulSelect(false);
+                user.setSuccessfullLoad(false);
                 user.setLoadedSong(null);
             }
         }
@@ -76,7 +74,7 @@ public class Search extends Command {
             songs = this.searchSongGenre(songs, this.getFilters().getGenre());
         }
 
-        if(songs.size() > 5) {
+        if (songs.size() > 5) {
             songs = new ArrayList<>(songs.subList(0, 5));
         }
         player.setSerchedSongsUser(this.getUsername(), songs, this.getTimestamp());
@@ -157,33 +155,33 @@ public class Search extends Command {
         return songsOutput;
     }
 
-    public ArrayList<SongInput> searchSongReleaseYear(ArrayList<SongInput> songs, String releaseYear) {
-        String numericalPart = releaseYear.replaceAll("[^0-9]", "");
+    public ArrayList<SongInput> searchSongReleaseYear(ArrayList<SongInput> songs, String relY) {
+        String numericalPart = relY.replaceAll("[^0-9]", "");
         Integer number = Integer.parseInt(numericalPart);
         ArrayList<SongInput> songsOutput = new ArrayList<>();
-        if (!releaseYear.isEmpty() && releaseYear.charAt(0) == '<') {
+        if (!relY.isEmpty() && relY.charAt(0) == '<') {
             songsOutput = this.searchSongReleaseYearSmaller(songs, number);
-        } else if (!releaseYear.isEmpty() && releaseYear.charAt(0) == '>') {
+        } else if (!relY.isEmpty() && relY.charAt(0) == '>') {
             songsOutput = this.searchSongReleaseYearBigger(songs, number);
 
         }
         return songsOutput;
     }
 
-    public ArrayList<SongInput> searchSongReleaseYearBigger(ArrayList<SongInput> songs, int releaseYear) {
+    public ArrayList<SongInput> searchSongReleaseYearBigger(ArrayList<SongInput> songs, int relY) {
         ArrayList<SongInput> songsOutput = new ArrayList<>();
         for (SongInput song : songs) {
-            if (song.getReleaseYear() > releaseYear) {
+            if (song.getReleaseYear() > relY) {
                 songsOutput.add(song);
 
             }
         }
         return songsOutput;
     }
-    public ArrayList<SongInput> searchSongReleaseYearSmaller(ArrayList<SongInput> songs, int releaseYear) {
+    public ArrayList<SongInput> searchSongReleaseYearSmaller(ArrayList<SongInput> songs, int relY) {
         ArrayList<SongInput> songsOutput = new ArrayList<>();
         for (SongInput song : songs) {
-            if (song.getReleaseYear() < releaseYear) {
+            if (song.getReleaseYear() < relY) {
                 songsOutput.add(song);
 
             }
@@ -195,33 +193,28 @@ public class Search extends Command {
         ArrayList<PodcastInput> podcasts = player.getLib().getPodcasts();
         if (this.getFilters().getName() != null) {
             podcasts = this.searchPodcastName(podcasts, this.getFilters().getName());
-//            System.out.println(podcasts.size());
-//            for(int i = 0; i < podcasts.size(); i++) {
-//                System.out.println(podcasts.get(i).getName());
-//            }
-
         } else if (this.getFilters().getOwner() != null) {
             podcasts = this.searchPodcastOwner(podcasts, this.getFilters().getOwner());
         }
-        if(podcasts.size() > 5) {
+        if (podcasts.size() > 5) {
             podcasts = new ArrayList<>(podcasts.subList(0, 5));
         }
         player.setSearchedPodcastsUser(this.getUsername(), podcasts, this.getTimestamp());
     }
-    public ArrayList<PodcastInput> searchPodcastName(ArrayList<PodcastInput> podcasts, String name) {
+    public ArrayList<PodcastInput> searchPodcastName(ArrayList<PodcastInput> podcasts, String n) {
         ArrayList<PodcastInput> podcastsOutput = new ArrayList<>();
         for (PodcastInput podcast : podcasts) {
-            if (podcast.getName().startsWith(name)) {
+            if (podcast.getName().startsWith(n)) {
                 podcastsOutput.add(podcast);
 
             }
         }
         return podcastsOutput;
     }
-    public ArrayList<PodcastInput> searchPodcastOwner(ArrayList<PodcastInput> podcasts, String owner) {
+    public ArrayList<PodcastInput> searchPodcastOwner(ArrayList<PodcastInput> pods, String o) {
         ArrayList<PodcastInput> podcastsOutput = new ArrayList<>();
-        for (PodcastInput podcast : podcasts) {
-            if (podcast.getOwner().contains(owner)) {
+        for (PodcastInput podcast : pods) {
+            if (podcast.getOwner().contains(o)) {
                 podcastsOutput.add(podcast);
 
             }
@@ -232,8 +225,8 @@ public class Search extends Command {
         ArrayList<Playlist> playlists = new ArrayList<>();
         int n = player.getUsers().size();
         UserClass user = null;
-        for(int i = 0; i < n; i++) {
-            if(this.getUsername().equals(player.getUsers().get(i).getUsername())) {
+        for (int i = 0; i < n; i++) {
+            if (this.getUsername().equals(player.getUsers().get(i).getUsername())) {
                 user = player.getUsers().get(i);
             }
 
@@ -244,19 +237,16 @@ public class Search extends Command {
         } else if (this.getFilters().getOwner() != null) {
             playlists = this.searchPlaylistOwner(playlists, this.getFilters().getOwner());
         }
-        if(playlists.size() > 5) {
+        if (playlists.size() > 5) {
             playlists = new ArrayList<>(playlists.subList(0, 5));
         }
         user.setSearchedPlaylists(playlists);
-        System.out.println(user.getSearchedPlaylists().size());
-        System.out.println(user.getSearchedSongs().size());
-        System.out.println(user.getSearchedPodcasts().size());
         user.setLastTimestamp(Integer.valueOf(this.getTimestamp()));
         player.addOutputSearchPlaylistMapper(user);
     }
     public ArrayList<Playlist> searchPlaylistName(ArrayList<Playlist> playlists, String name) {
         ArrayList<Playlist> playlistsOutput = new ArrayList<>();
-        if(playlists != null && !playlists.isEmpty()) {
+        if (playlists != null && !playlists.isEmpty()) {
             for (Playlist playlist : playlists) {
                 if (playlist.getName().startsWith(name)) {
                     playlistsOutput.add(playlist);
@@ -267,15 +257,13 @@ public class Search extends Command {
     }
     public ArrayList<Playlist> searchPlaylistOwner(ArrayList<Playlist> playlists, String owner) {
         ArrayList<Playlist> playlistsOutput = new ArrayList<>();
-        if(playlists != null && !playlists.isEmpty()) {
+        if (playlists != null && !playlists.isEmpty()) {
             for (Playlist playlist : playlists) {
                 if (playlist.getOwner().contains(owner)) {
                     playlistsOutput.add(playlist);
                 }
             }
         }
-//        System.out.println(playlistsOutput.size());
-//        System.out.println(playlistsOutput.get(0).getName());
         return playlistsOutput;
     }
 }

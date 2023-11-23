@@ -14,36 +14,27 @@ public class Select extends Command {
             if (player.getUsers().get(i).getUsername().equals(this.getUsername())) {
                 u = player.getUsers().get(i);
                 u.setLastTimestamp(Integer.valueOf(this.getTimestamp()));
-                if (player.getUsers().get(i).getSearchedSongs() != null && player.getUsers().get(i).getSearchedSongs().size() != 0) {
+                if (u.getSearchedSongs() != null && u.getSearchedSongs().size() != 0) {
                     if ((this.getItemNumber() - 1) >= player.getUsers().get(i).getSearchedSongs().size()) {
-//                        System.out.println("Selectia nu a fost gasita");
                         u.setSuccessfulSelect(false);
-//                        u.setLastTimestamp(Integer.valueOf(this.getTimestamp()));
                     } else {
-//                        System.out.println("Selectia este: " + player.getUsers().get(i).getSearchedSongs().get(this.getItemNumber() - 1).getName());
                         u.setSuccessfulSelect(true);
-                        u.selectedSearch(player.getUsers().get(i).getSearchedSongs().get(this.getItemNumber() - 1).getName(), this.getTimestamp());
-//                        player.addOutputSelectMapper(player.getUsers().get(i));
+                        u.selectedSearch(u.getSearchedSongs().get(this.getItemNumber() - 1).getName(), this.getTimestamp());
                     }
-                } else if (player.getUsers().get(i).getSearchedPodcasts() != null && player.getUsers().get(i).getSearchedPodcasts().size() != 0) {
-                    if ((this.getItemNumber() - 1 )>= player.getUsers().get(i).getSearchedPodcasts().size()) {
-//                        System.out.println("Selectia nu a fost gasita");
+                } else if (u.getSearchedPodcasts() != null && u.getSearchedPodcasts().size() != 0) {
+                    if ((this.getItemNumber() - 1 ) >= u.getSearchedPodcasts().size()) {
                         u.setSuccessfulSelect(false);
-//                        u.setLastTimestamp(Integer.valueOf(this.getTimestamp()));
                     } else {
-//                        System.out.println("Selectia este: " + player.getUsers().get(i).getSearchedPodcasts().get(this.getItemNumber() - 1).getName());
                         u.setSuccessfulSelect(true);
-                        u.selectedSearch(player.getUsers().get(i).getSearchedPodcasts().get(this.getItemNumber() - 1).getName(), this.getTimestamp());
+                        u.selectedSearch(u.getSearchedPodcasts().get(this.getItemNumber() - 1).getName(), this.getTimestamp());
 
                     }
-                } else if(player.getUsers().get(i).getSearchedPlaylists() != null && player.getUsers().get(i).getSearchedPlaylists().size() != 0) {
-//                    System.out.println(player.getUsers().get(i).getSearchedPlaylists().size());
-                    if ((this.getItemNumber() - 1) >= player.getUsers().get(i).getSearchedPlaylists().size()) {
+                } else if(u.getSearchedPlaylists() != null && u.getSearchedPlaylists().size() != 0) {
+                    if ((this.getItemNumber() - 1) >= u.getSearchedPlaylists().size()) {
                         u.setSuccessfulSelect(false);
                     } else {
                         u.setSuccessfulSelect(true);
-                        u.selectedSearch(player.getUsers().get(i).getSearchedPlaylists().get(this.getItemNumber() - 1).getName(), this.getTimestamp());
-//                        System.out.println(player.getUsers().get(i).getSearchedPlaylists().get(this.getItemNumber() - 1).getName());
+                        u.selectedSearch(u.getSearchedPlaylists().get(this.getItemNumber() - 1).getName(), this.getTimestamp());
                     }
                 }
             }

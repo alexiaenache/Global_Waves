@@ -4,7 +4,7 @@ import fileio.input.SongInput;
 
 import java.util.ArrayList;
 
-public class AddRemoveInPlaylist extends  Command{
+public class AddRemoveInPlaylist extends  Command {
     public void setAddRemoveInPlaylist(Command comm) {
         this.setCommand(comm.getCommand());
         this.setUsername(comm.getUsername());
@@ -14,19 +14,19 @@ public class AddRemoveInPlaylist extends  Command{
     public void run(Player player) {
         int n = player.getUsers().size();
         UserClass user = null;
-        for(int i = 0; i < n; i++) {
-            if(this.getUsername().equals(player.getUsers().get(i).getUsername())) {
+        for (int i = 0; i < n; i++) {
+            if (this.getUsername().equals(player.getUsers().get(i).getUsername())) {
                 user = player.getUsers().get(i);
             }
         }
         user.setLastTimestamp(Integer.valueOf(getTimestamp()));
         String message = "";
         boolean found = false;
-        if(!user.isSuccessfullLoad()) {
+        if (!user.isSuccessfullLoad()) {
             message = "Please load a source before adding to or removing from the playlist.";
-        } else if(user.getLoadedSong() == null) {
+        } else if (user.getLoadedSong() == null) {
             message = "The loaded source is not a song.";
-        } else if(user.getPlaylists() == null || user.getPlaylists().size() < getPlaylistId()) {
+        } else if (user.getPlaylists() == null || user.getPlaylists().size() < getPlaylistId()) {
             message = "The specified playlist does not exist.";
         } else {
             ArrayList<Playlist> playlists = user.getPlaylists();
@@ -34,26 +34,28 @@ public class AddRemoveInPlaylist extends  Command{
                 if (i == getPlaylistId()) {
                     Playlist playlist = playlists.get(i - 1);
 
-                    if(playlist.getSongs() == null) {
+                    if (playlist.getSongs() == null) {
                         ArrayList<SongInput> songs = null;
                         songs = new ArrayList<>();
                         playlist.setSongs(songs);
 
                     }
 
-                    if(playlist.getSongs() != null && playlist.getSongs().size() > 0) {
+                    if (playlist.getSongs() != null && playlist.getSongs().size() > 0) {
                         for (SongInput song : playlist.getSongs()) {
                             if (song.getName().equals(user.getLoadedSong().getName())) {
                                 found = true;
                             }
                         }
                     }
-                    if(found) {
+                    if (found) {
                         playlist.removeSong(user.getLoadedSong());
                         message = "Successfully removed from playlist.";
                     } else {
                         playlist.addSong(user.getLoadedSong());
-                        playlist.setDuration(playlist.getDuration() + user.getLoadedSong().getDuration());
+                        int a = playlist.getDuration();
+                        int b = user.getLoadedSong().getDuration();
+                        playlist.setDuration(a + b);
                         message = "Successfully added to playlist.";
                     }
                 }
