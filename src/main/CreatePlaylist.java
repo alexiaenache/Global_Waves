@@ -1,15 +1,23 @@
 package main;
 
 import java.util.ArrayList;
-
+/**
+ * Class that contains the methods for creating a playlist
+ */
 public class CreatePlaylist extends Command {
-    public void setCreatePlaylist(Command comm) {
+    /**
+     * Method that sets the command
+     */
+    public void setCreatePlaylist(final Command comm) {
         this.setCommand(comm.getCommand());
         this.setUsername(comm.getUsername());
         this.setTimestamp(comm.getTimestamp());
         this.setPlaylistName(comm.getPlaylistName());
     }
-    public void run(Player player) {
+    /**
+     * Method that runs the command
+     */
+    public void run(final Player player) {
         int n = player.getUsers().size();
         UserClass user = null;
 

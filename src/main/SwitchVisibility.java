@@ -1,13 +1,21 @@
 package main;
-
+/**
+ * Class that contains the methods for switching the visibility of a playlist
+ */
 public class SwitchVisibility extends Command {
-    public void setSwitchVisibility(Command c) {
+    /**
+     * Method that sets the command
+     */
+    public void setSwitchVisibility(final Command c) {
         this.setCommand(c.getCommand());
         this.setUsername(c.getUsername());
         this.setTimestamp(c.getTimestamp());
         this.setPlaylistId(c.getPlaylistId());
     }
-    public void run(Player player) {
+    /**
+     * Method that runs the command
+     */
+    public void run(final Player player) {
         int n = player.getUsers().size();
         UserClass user = null;
 

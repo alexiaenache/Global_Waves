@@ -3,15 +3,23 @@ package main;
 import fileio.input.SongInput;
 
 import java.util.ArrayList;
-
+/**
+ * Class that contains the methods for adding and removing songs from a playlist
+ */
 public class AddRemoveInPlaylist extends  Command {
-    public void setAddRemoveInPlaylist(Command comm) {
+    /**
+     * Method that sets the command
+     */
+    public void setAddRemoveInPlaylist(final Command comm) {
         this.setCommand(comm.getCommand());
         this.setUsername(comm.getUsername());
         this.setTimestamp(comm.getTimestamp());
         this.setPlaylistId(comm.getPlaylistId());
     }
-    public void run(Player player) {
+    /**
+     * Method that runs the command
+     */
+    public void run(final Player player) {
         int n = player.getUsers().size();
         UserClass user = null;
         for (int i = 0; i < n; i++) {

@@ -1,12 +1,20 @@
 package main;
-
+/**
+ * Class that contains the methods for displaying a playlists
+ */
 public class ShowPlaylists extends Command {
-    public void setShowPlaylists(Command comm) {
+    /**
+     * Method that sets the command
+     */
+    public void setShowPlaylists(final Command comm) {
         this.setCommand(comm.getCommand());
         this.setUsername(comm.getUsername());
         this.setTimestamp(comm.getTimestamp());
     }
-    public void run(Player player) {
+    /**
+     * Method that runs the command
+     */
+    public void run(final Player player) {
         int n = player.getUsers().size();
         UserClass user = null;
         for (int i = 0; i < n; i++) {

@@ -9,7 +9,9 @@ import fileio.input.SongInput;
 import fileio.input.UserInput;
 
 import java.util.ArrayList;
-
+/**
+ * Class that represents the application, contains the methods for the commands
+ */
 public class Player {
     private LibraryInput lib;
     private ArrayList<UserClass> users;
@@ -19,15 +21,23 @@ public class Player {
     private ArrayList<String> likedSongs;
     private ArrayList<Integer> likes;
 
-
+    /**
+     * Method that returns the library
+     */
     public LibraryInput getLib() {
         return lib;
     }
-
-    public void setLib(LibraryInput lib) {
+    /**
+     * Method that sets the library
+     */
+    public void setLib(final LibraryInput lib) {
         this.lib = lib;
     }
-    public void setSerchedSongsUser(String user, ArrayList<SongInput> songs, String timestamp) {
+    /**
+     * Method that sets the serached songs for a user
+     */
+    public void setSerchedSongsUser(
+            final String user, final ArrayList<SongInput> songs, final String timestamp) {
         for (int i = 0; i < this.users.size(); i++) {
             if (this.users.get(i).getUsername().equals(user)) {
                 this.users.get(i).setSearchedSongs(songs);
@@ -38,7 +48,11 @@ public class Player {
             }
         }
     }
-    public void setSearchedPodcastsUser(String user, ArrayList<PodcastInput> podcasts, String timestamp) {
+    /**
+     * Method that sets the searched podcasts for a user
+     */
+    public void setSearchedPodcastsUser(
+            final String user, final ArrayList<PodcastInput> podcasts, final String timestamp) {
         for (int i = 0; i < this.users.size(); i++) {
             if (this.users.get(i).getUsername().equals(user)) {
                 this.users.get(i).setSearchedPodcasts(podcasts);
@@ -49,7 +63,11 @@ public class Player {
             }
         }
     }
-    public void addOutputSearchMapper(UserClass user) {
+    /**
+     * Method that adds the searched songs for a user
+     */
+    public void
+    addOutputSearchMapper(final UserClass user) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "search");
         node.put("user", user.getUsername());
@@ -62,7 +80,8 @@ public class Player {
             }
             node.put("results", this.mapper.valueToTree(songNames));
         } else if (user.getSearchedPodcasts() != null) {
-            node.put("message", "Search returned " + user.getSearchedPodcasts().size() + " results");
+            node.put("message", "Search returned "
+                    + user.getSearchedPodcasts().size() + " results");
             ArrayList<String> podcastNames = new ArrayList<>();
             for (PodcastInput podcast : user.getSearchedPodcasts()) {
                 podcastNames.add(podcast.getName());
@@ -71,7 +90,10 @@ public class Player {
         }
         this.output.add(node);
     }
-    public void addOutputSearchPlaylistMapper(UserClass user) {
+    /**
+     * Method that that adds the output for the searched playlists
+     */
+    public void addOutputSearchPlaylistMapper(final UserClass user) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "search");
         node.put("user", user.getUsername());
@@ -85,12 +107,14 @@ public class Player {
         for (Playlist playlist : user.getSearchedPlaylists()) {
             playlistNames.add(playlist.getName());
         }
-//        System.out.println(playlistNames.size());
-//        System.out.println(playlistNames.get(0));
         node.put("results", this.mapper.valueToTree(playlistNames));
         this.output.add(node);
     }
-    public void addOutputSelectMapper(UserClass user, boolean successfulSelect) {
+    /**
+     * Method that adds the output for the select command
+     */
+    public void
+    addOutputSelectMapper(final UserClass user, final boolean successfulSelect) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "select");
         node.put("user", user.getUsername());
@@ -111,7 +135,10 @@ public class Player {
         user.setSearched(false);
         this.output.add(node);
     }
-    public void addOutputLoadMapper(UserClass user) {
+    /**
+     * Method that adds the output for the load command
+     */
+    public void addOutputLoadMapper(final UserClass user) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "load");
         node.put("user", user.getUsername());
@@ -119,7 +146,7 @@ public class Player {
         String message;
         if (user.getSearchedSongs() == null && user.getSearchedPodcasts() == null) {
             message = "You can't load an empty audio collection!";
-        } else if(!user.isSuccessfulSelect()) {
+        } else if (!user.isSuccessfulSelect()) {
             message = "Please select a source before attempting to load.";
         } else {
             message = "Playback loaded successfully.";
@@ -128,7 +155,11 @@ public class Player {
         node.put("message", message);
         this.output.add(node);
         }
-        public void addOutputStatusMapper(UserClass user, String name, int remTime, String repM) {
+        /**
+         * Method that adds the output for the status command
+         */
+        public void addOutputStatusMapper(
+                final UserClass user, String name, final int remTime, final String repM) {
             ObjectNode node = this.mapper.createObjectNode();
             node.put("command", "status");
             node.put("user", user.getUsername());
@@ -145,7 +176,10 @@ public class Player {
             node.set("stats", statsNode);
             this.output.add(node);
     }
-    public void addOutputPlayPauseMapper(UserClass user) {
+    /**
+     * method that adds the output for the play/pause command
+     */
+    public void addOutputPlayPauseMapper(final UserClass user) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "playPause");
         node.put("user", user.getUsername());
@@ -161,7 +195,10 @@ public class Player {
         node.put("message", message);
         this.output.add(node);
     }
-    public void addOutputCreatePlaylist(UserClass user, boolean found) {
+    /**
+     * Method that adds the output for the create a playlist command
+     */
+    public void addOutputCreatePlaylist(final UserClass user, final boolean found) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "createPlaylist");
         node.put("user", user.getUsername());
@@ -175,7 +212,11 @@ public class Player {
         node.put("message", message);
         this.output.add(node);
     }
-    public void addOutputAddRemoveInPlaylistMapper(UserClass user, String message) {
+    /**
+     * Method that adds the output for the add/remove in playlist command
+     */
+    public void
+    addOutputAddRemoveInPlaylistMapper(final UserClass user, final String message) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "addRemoveInPlaylist");
         node.put("user", user.getUsername());
@@ -183,7 +224,10 @@ public class Player {
         node.put("message", message);
         this.output.add(node);
     }
-    public void addOutputShowPlaylistsMapper(UserClass user) {
+    /**
+     * Method that adds the output for the show playlist command
+     */
+    public void addOutputShowPlaylistsMapper(final UserClass user) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "showPlaylists");
         node.put("user", user.getUsername());
@@ -211,7 +255,10 @@ public class Player {
         node.set("result", this.mapper.valueToTree(results));
         this.output.add(node);
     }
-    public void addOutputShowPreferredSongsMapper(UserClass user) {
+    /**
+     * Method that adds the output for the show preferred songs command
+     */
+    public void addOutputShowPreferredSongsMapper(final UserClass user) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "showPreferredSongs");
         node.put("user", user.getUsername());
@@ -225,21 +272,10 @@ public class Player {
         node.put("result", this.mapper.valueToTree(results));
         this.output.add(node);
     }
-    public void addNewUser(UserInput user) {
-        UserClass newUser = new UserClass();
-        newUser.copyUser(user);
-        this.users.add(newUser);
-    }
-    public void copyAllUsers(ArrayList<UserInput> users) {
-        this.users = new ArrayList<>();
-        for (int i = 0; i < users.size(); i++) {
-            this.users.add(new UserClass());
-            this.users.get(i).setUsername(users.get(i).getUsername());
-            this.users.get(i).setAge(users.get(i).getAge());
-            this.users.get(i).setCity(users.get(i).getCity());
-        }
-    }
-    public void addOutputLikeMapper(UserClass user, String message) {
+    /**
+     * Method that adds the output for the like songs command
+     */
+    public void addOutputLikeMapper(final UserClass user, final String message) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "like");
         node.put("user", user.getUsername());
@@ -248,7 +284,10 @@ public class Player {
         this.output.add(node);
     }
 
-    public void addOutputFollow(UserClass user, String message) {
+    /**
+     * Method that adds the output for the follow playlist command
+     */
+    public void addOutputFollow(final UserClass user, final String message) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "follow");
         node.put("message", message);
@@ -256,7 +295,10 @@ public class Player {
         node.put("user", user.getUsername());
         this.output.add(node);
     }
-    public void addOutputSwitchVisibility(UserClass user, String message) {
+    /**
+     * Method that adds the output for the switch visibility command
+     */
+    public void addOutputSwitchVisibility(final UserClass user, final String message) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "switchVisibility");
         node.put("user", user.getUsername());
@@ -264,7 +306,11 @@ public class Player {
         node.put("message", message);
         this.output.add(node);
     }
-    public void addOutputTop5PlaylistsMapper(Integer timestamp, ArrayList<Playlist> top5Playlists) {
+    /**
+     * Method that adds the output for the top 5 playlists command
+     */
+    public void addOutputTop5PlaylistsMapper(
+            final Integer timestamp, final ArrayList<Playlist> top5Playlists) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "getTop5Playlists");
         ArrayList<String> results = new ArrayList<>();
@@ -276,7 +322,11 @@ public class Player {
         node.put("timestamp", timestamp);
         this.output.add(node);
     }
-    public void addOutputTop5SongsMapper(Integer integer, ArrayList<String> top5Songs) {
+    /**
+     * Method that adds the output for the top 5 songs command
+     */
+    public void addOutputTop5SongsMapper(
+            final Integer integer, final ArrayList<String> top5Songs) {
         ObjectNode node = this.mapper.createObjectNode();
         node.put("command", "getTop5Songs");
 
@@ -284,68 +334,100 @@ public class Player {
         node.put("timestamp", integer);
         this.output.add(node);
     }
-    public ArrayNode getOutput() {
-        return output;
+    /**
+     * Method that makes a deep copy of the users
+     */
+    public void copyAllUsers(final ArrayList<UserInput> users) {
+        this.users = new ArrayList<>();
+        for (int i = 0; i < users.size(); i++) {
+            this.users.add(new UserClass());
+            this.users.get(i).setUsername(users.get(i).getUsername());
+            this.users.get(i).setAge(users.get(i).getAge());
+            this.users.get(i).setCity(users.get(i).getCity());
+        }
     }
-
-    public void setOutput(ArrayNode output) {
+   /**
+     * Method that sets the output
+     */
+    public void setOutput(final ArrayNode output) {
         this.output = output;
     }
-
-    public ObjectMapper getMapper() {
-        return mapper;
-    }
-
-    public void setMapper(ObjectMapper mapper) {
+    /**
+     * Method that sets the mapper
+     */
+    public void setMapper(final ObjectMapper mapper) {
         this.mapper = mapper;
     }
+    /**
+     * Method that returns the users
+     */
     public ArrayList<UserClass> getUsers() {
         return users;
     }
-
-    public void setUsers(ArrayList<UserClass> users) {
-        this.users = users;
-    }
-
+    /**
+     * Method that returns the playlists
+     */
     public ArrayList<Playlist> getPlaylists() {
         return playlists;
     }
-
-    public void setPlaylists(ArrayList<Playlist> playlists) {
+    /**
+     * Method that sets the playlists
+     */
+    public void setPlaylists(final ArrayList<Playlist> playlists) {
         this.playlists = playlists;
     }
-    public void addInPlaylists(Playlist playlist) {
+    /**
+     * Method that adds a user
+     */
+    public void addInPlaylists(final Playlist playlist) {
         this.playlists.add(playlist);
     }
-
+    /**
+     * Method that return the list og liked songs
+     */
     public ArrayList<String> getLikedSongs() {
         return likedSongs;
     }
-
-    public void setLikedSongs(ArrayList<String> likedSongs) {
+    /**
+     * Method that sets the list of liked songs
+     */
+    public void setLikedSongs(final ArrayList<String> likedSongs) {
         this.likedSongs = likedSongs;
     }
-
+    /**
+     * Method that returns the list of likes
+     */
     public ArrayList<Integer> getLikes() {
         return likes;
     }
-
-    public void setLikes(ArrayList<Integer> likes) {
+    /**
+     * Method that sets the list of likes
+     */
+    public void setLikes(final ArrayList<Integer> likes) {
         this.likes = likes;
     }
-    public void addLikedSong(String songName) {
+    /**
+     * Method that adds a like to a song
+     */
+    public void addLikedSong(final String songName) {
         likedSongs.add(songName);
         likes.add(1); // Initialize with 1 like
     }
-
-    public void removeLikedSong(String songName) {
+    /**
+     * Method that removes a like from a song
+     */
+    public void removeLikedSong(final String songName) {
         int index = likedSongs.indexOf(songName);
         if (index != -1) {
             likedSongs.remove(index);
             likes.remove(index);
         }
     }
-    public void addLikeToSong(String songName) {
+    /**
+     * Method that adds a like to a song and also
+     * adds the song if it doesn't exist
+     */
+    public void addLikeToSong(final String songName) {
         int index = likedSongs.indexOf(songName);
 
         if (index == -1) {
@@ -358,7 +440,11 @@ public class Player {
             likes.set(index, currentLikes + 1);
         }
     }
-    public void removeLikeFromSong(String songName) {
+    /**
+     * Method that removes a like from a song and also
+     * removes the song if it reaches 0 likes
+     */
+    public void removeLikeFromSong(final String songName) {
         int index = likedSongs.indexOf(songName);
 
         if (index != -1) {

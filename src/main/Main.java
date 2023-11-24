@@ -78,7 +78,8 @@ public final class Main {
         LibraryInput library = objectMapper.readValue(new File(LIBRARY_PATH), LibraryInput.class);
         ArrayNode outputs = objectMapper.createArrayNode();
 
-        ArrayList<Command> commands = objectMapper.readValue(new File("input/" + filePathInput), new TypeReference<ArrayList<Command>>(){ });
+        ArrayList<Command> commands = objectMapper.readValue(new File("input/"
+                + filePathInput), new TypeReference<ArrayList<Command>>() { });
 
         ObjectMapper mapper = new ObjectMapper();
         Player p = new Player();
@@ -160,6 +161,8 @@ public final class Main {
                     c = new GetTop5Songs();
                     ((GetTop5Songs) c).setGetTop5Songs(commands.get(i));
                     ((GetTop5Songs) c).run(p);
+                    break;
+                default:
                     break;
             }
         }

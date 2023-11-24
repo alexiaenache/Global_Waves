@@ -5,14 +5,22 @@ import fileio.input.PodcastInput;
 import fileio.input.SongInput;
 
 import java.util.ArrayList;
-
-public class Status extends Command{
-    public void setLoad(Command comm) {
+/**
+ * Class that contains the methods for displaying the status of an user
+ */
+public class Status extends Command {
+    /**
+     * Method that sets the command
+     */
+    public void setLoad(final Command comm) {
         this.setCommand(comm.getCommand());
         this.setUsername(comm.getUsername());
         this.setTimestamp(comm.getTimestamp());
     }
-    public void run (Player player) {
+    /**
+     * Method that runs the command
+     */
+    public void run(final Player player) {
         int n = player.getUsers().size();
         UserClass user = null;
         String repeatMessage = null;
@@ -67,7 +75,8 @@ public class Status extends Command{
                             }
                             timePassedPodcast += timePassed;
                             for (EpisodeInput episode : podcast.getEpisodes()) {
-                                if (aux < timePassed && timePassedPodcast <= aux + episode.getDuration()) {
+                                if (aux < timePassed && timePassedPodcast
+                                        <= aux + episode.getDuration()) {
                                     currenteEpisode = episode;
 //                                    remainedTime = episode.getDuration() - (timePassed - aux);
                                     name = episode.getName();
@@ -113,7 +122,7 @@ public class Status extends Command{
 
 
 
-        if(remainedTime < 0 && user.getRepeat() == 0) {
+        if (remainedTime < 0 && user.getRepeat() == 0) {
             remainedTime = 0;
             user.setPaused(true);
         }

@@ -1,7 +1,9 @@
 package main;
 
 import java.util.ArrayList;
-
+/**
+ * Class that contains the information about a filters, used for parsing
+ */
 public class Filters {
     private String name;
     private String album;
@@ -10,101 +12,110 @@ public class Filters {
     private String genre;
     private String releaseYear;
     private String artist;
-
     private ArrayList<String> tags;
-
-    public int countInitializedFildes() {
-        int count = 0;
-        if (this.name != null) {
-            count++;
-        }
-        if (this.album != null) {
-            count++;
-        }
-        if (this.owner != null) {
-            count++;
-        }
-        if (this.lyrics != null) {
-            count++;
-        }
-        if (this.genre != null) {
-            count++;
-        }
-        if (this.releaseYear != null) {
-            count++;
-        }
-        if (this.artist != null) {
-            count++;
-        }
-        if (this.tags != null) {
-            count++;
-        }
-        return count;
-    }
-
+    /**
+     * Method that returns the album
+     */
     public String getAlbum() {
         return album;
     }
-
-    public void setAlbum(String album) {
+    /**
+     * Method that sets the album
+     */
+    public void setAlbum(final String album) {
         this.album = album;
     }
-
+    /**
+     * Method that return the lyrics
+     */
     public String getLyrics() {
         return lyrics;
     }
+    /**
+     * Method that sets the lyrics
+     */
 
-    public void setLyrics(String lyrics) {
+    public void setLyrics(final String lyrics) {
         this.lyrics = lyrics;
     }
+    /**
+     * Method that returns the genre
+     */
 
     public String getGenre() {
         return genre;
     }
+    /**
+     * Method that sets the genre
+     */
 
-    public void setGenre(String genre) {
+    public void setGenre(final String genre) {
         this.genre = genre;
     }
+    /**
+     * Method that returns the release year
+     */
 
     public String getReleaseYear() {
         return releaseYear;
     }
+    /**
+     * Method that sets the release year
+     */
 
-    public void setReleaseYear(String releaseYear) {
+    public void setReleaseYear(final String releaseYear) {
         this.releaseYear = releaseYear;
     }
+    /**
+     * Method that returns the artist
+     */
 
     public String getArtist() {
         return artist;
     }
+    /**
+     * Method that sets the artist
+     */
 
-    public void setArtist(String artist) {
+    public void setArtist(final String artist) {
         this.artist = artist;
     }
+    /**
+     * Method that returns the owner
+     */
 
     public String getOwner() {
         return owner;
     }
+    /**
+     * Method that sets the owner
+     */
 
-    public void setOwner(String owner) {
+    public void setOwner(final String owner) {
         this.owner = owner;
     }
-
-
-
+    /**
+     * Method that returns the name
+     */
     public String getName() {
         return name;
     }
-
-    public void setName(String name) {
+    /**
+     * Method that sets the name
+     */
+    public void setName(final String name) {
         this.name = name;
     }
-
+    /**
+     * Method that returns the tags
+     */
     public ArrayList<String> getTags() {
         return tags;
     }
-
-    public void setTags(ArrayList<String> tags) {
+    /**
+     * Method that sets the tags
+     */
+    public void setTags(final ArrayList<String> tags) {
         this.tags = tags;
     }
 }

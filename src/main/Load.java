@@ -5,14 +5,22 @@ import fileio.input.PodcastInput;
 import fileio.input.SongInput;
 
 import java.util.ArrayList;
-
+/**
+ * Class that contains the methods for loading a source
+ */
 public class Load extends Command {
-    public void setLoad(Command comm) {
+    /**
+     * Method that sets the command
+     */
+    public void setLoad(final Command comm) {
         this.setCommand(comm.getCommand());
         this.setUsername(comm.getUsername());
         this.setTimestamp(comm.getTimestamp());
     }
-    public void run(Player player) {
+    /**
+     * Method that runs the command
+     */
+    public void run(final Player player) {
         int n = player.getUsers().size();
         UserClass user = null;
         for (int i = 0; i < n; i++) {
@@ -34,13 +42,10 @@ public class Load extends Command {
             user.setLoadedSong(s);
             user.setLastPlay(Integer.valueOf(getTimestamp()));
             user.setPaused(false);
-            if (s == null) {
-                System.out.println(user.getLastTimestamp());
-            } else {
+            if (s != null) {
                 user.setRemainedTime(s.getDuration());
             }
-        }
-        else if (user.getSearchedPodcasts() != null && !user.getSearchedPodcasts().isEmpty()) {
+        } else if (user.getSearchedPodcasts() != null && !user.getSearchedPodcasts().isEmpty()) {
             ArrayList<PodcastInput> podcasts = user.getSearchedPodcasts();
             PodcastInput p = null;
             for (PodcastInput podcast : podcasts) {
@@ -53,8 +58,9 @@ public class Load extends Command {
             }
             user.setLastPlay(Integer.valueOf(getTimestamp()));
             user.setPaused(false);
-            if (user.getLoadedPodcast() == null)
+            if (user.getLoadedPodcast() == null) {
                 return;
+            }
             ArrayList<EpisodeInput> episodes = user.getLoadedPodcast().getEpisodes();
             int d = 0;
                 for (EpisodeInput episode : episodes) {
@@ -78,8 +84,9 @@ public class Load extends Command {
             }
             user.setLastPlay(Integer.valueOf(getTimestamp()));
             user.setPaused(false);
-            if (user.getLoadedPlaylist() == null)
+            if (user.getLoadedPlaylist() == null) {
                 return;
+            }
             user.setRemainedTime(user.getLoadedPlaylist().getDuration());
         }
         player.addOutputLoadMapper(user);

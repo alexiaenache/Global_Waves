@@ -3,19 +3,27 @@ package main;
 import fileio.input.SongInput;
 
 import java.util.ArrayList;
-
+/**
+ * Class that contains the methods for liking and unliking a song
+ */
 public class Like extends Command {
-    public void setLike(Command c) {
+    /**
+     * Method that sets the command
+     */
+    public void setLike(final Command c) {
         this.setCommand(c.getCommand());
         this.setUsername(c.getUsername());
         this.setTimestamp(c.getTimestamp());
     }
-    public void run(Player player) {
-        if(player.getLikedSongs() == null) {
+    /**
+     * Method that runs the command
+     */
+    public void run(final Player player) {
+        if (player.getLikedSongs() == null) {
             ArrayList<String> likedSongs = new ArrayList<>();
             player.setLikedSongs(likedSongs);
         }
-        if(player.getLikes() == null) {
+        if (player.getLikes() == null) {
             ArrayList<Integer> likes = new ArrayList<>();
             player.setLikes(likes);
         }
@@ -48,12 +56,10 @@ public class Like extends Command {
                     user.removeLikedSong(user.getLoadedSong());
                     player.removeLikeFromSong(user.getLoadedSong().getName());
                     message = "Unlike registered successfully.";
-                    System.out.println("unliked" + user.getLoadedSong().getName());
                 } else {
                     user.addLikedSong(user.getLoadedSong());
                     player.addLikeToSong(user.getLoadedSong().getName());
                     message = "Like registered successfully.";
-                    System.out.println("liked" + user.getLoadedSong().getName());
                 }
 
         }

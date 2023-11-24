@@ -1,12 +1,20 @@
 package main;
-
-public class ShowPreferredSongs extends Command{
-    public void setShowPreferredSongs(Command comm) {
+/**
+ * Class that contains the methods for displaying the songs that a user liked
+ */
+public class ShowPreferredSongs extends Command {
+    /**
+     * Method that sets the command
+     */
+    public void setShowPreferredSongs(final Command comm) {
         this.setCommand(comm.getCommand());
         this.setUsername(comm.getUsername());
         this.setTimestamp(comm.getTimestamp());
     }
-    public void run(Player player) {
+    /**
+     * Method that runs the command
+     */
+    public void run(final Player player) {
         int n = player.getUsers().size();
         UserClass user = null;
         for (int i = 0; i < n; i++) {

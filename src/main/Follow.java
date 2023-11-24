@@ -1,12 +1,20 @@
 package main;
-
+/**
+ * Class that contains the methods for following a playlist
+ */
 public class Follow extends Command {
-    public void setFollow(Command c) {
+    /**
+     * Method that sets the command
+     */
+    public void setFollow(final Command c) {
         this.setCommand(c.getCommand());
         this.setUsername(c.getUsername());
         this.setTimestamp(c.getTimestamp());
     }
-    public void run(Player player) {
+    /**
+     * Method that runs the command
+     */
+    public void run(final Player player) {
         int n = player.getUsers().size();
         UserClass user = null;
         for (int i = 0; i < n; i++) {
@@ -21,12 +29,12 @@ public class Follow extends Command {
         String message = "";
         boolean found = false;
         user.setLastTimestamp(Integer.valueOf(getTimestamp()));
-        if(user.getSelectedSearch() == null) {
+        if (user.getSelectedSearch() == null) {
             message = "Please select a source before following or unfollowing.";
             player.addOutputFollow(user, message);
             return;
         }
-        if(player.getPlaylists() != null && !player.getPlaylists().isEmpty()) {
+        if (player.getPlaylists() != null && !player.getPlaylists().isEmpty()) {
             for (Playlist playlist : player.getPlaylists()) {
                 if (playlist.getName().equals(user.getSelectedSearch())) {
                     found = true;
@@ -47,7 +55,7 @@ public class Follow extends Command {
                 }
             }
         }
-        if(!found) {
+        if (!found) {
             message = "The selected source is not a playlist.";
         }
         player.addOutputFollow(user, message);
