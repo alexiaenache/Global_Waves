@@ -16,7 +16,8 @@ public class Player {
     private ArrayList<Playlist> playlists;
     private ObjectMapper mapper;
     private ArrayNode output;
-
+    private ArrayList<String> likedSongs;
+    private ArrayList<Integer> likes;
 
 
     public LibraryInput getLib() {
@@ -220,8 +221,8 @@ public class Player {
             for (SongInput song : user.getLikedSongs()) {
                 results.add(song.getName());
             }
-            node.put("result", this.mapper.valueToTree(results));
         }
+        node.put("result", this.mapper.valueToTree(results));
         this.output.add(node);
     }
     public void addNewUser(UserInput user) {
@@ -263,6 +264,26 @@ public class Player {
         node.put("message", message);
         this.output.add(node);
     }
+    public void addOutputTop5PlaylistsMapper(Integer timestamp, ArrayList<Playlist> top5Playlists) {
+        ObjectNode node = this.mapper.createObjectNode();
+        node.put("command", "getTop5Playlists");
+        ArrayList<String> results = new ArrayList<>();
+
+        for (Playlist playlist : top5Playlists) {
+            results.add(playlist.getName());
+        }
+        node.put("result", this.mapper.valueToTree(results));
+        node.put("timestamp", timestamp);
+        this.output.add(node);
+    }
+    public void addOutputTop5SongsMapper(Integer integer, ArrayList<String> top5Songs) {
+        ObjectNode node = this.mapper.createObjectNode();
+        node.put("command", "getTop5Songs");
+
+        node.put("result", this.mapper.valueToTree(top5Songs));
+        node.put("timestamp", integer);
+        this.output.add(node);
+    }
     public ArrayNode getOutput() {
         return output;
     }
@@ -297,5 +318,63 @@ public class Player {
         this.playlists.add(playlist);
     }
 
+    public ArrayList<String> getLikedSongs() {
+        return likedSongs;
+    }
+
+    public void setLikedSongs(ArrayList<String> likedSongs) {
+        this.likedSongs = likedSongs;
+    }
+
+    public ArrayList<Integer> getLikes() {
+        return likes;
+    }
+
+    public void setLikes(ArrayList<Integer> likes) {
+        this.likes = likes;
+    }
+    public void addLikedSong(String songName) {
+        likedSongs.add(songName);
+        likes.add(1); // Initialize with 1 like
+    }
+
+    public void removeLikedSong(String songName) {
+        int index = likedSongs.indexOf(songName);
+        if (index != -1) {
+            likedSongs.remove(index);
+            likes.remove(index);
+        }
+    }
+    public void addLikeToSong(String songName) {
+        int index = likedSongs.indexOf(songName);
+
+        if (index == -1) {
+            // Song not found, add it to the end with one like
+            likedSongs.add(songName);
+            likes.add(1);
+        } else {
+            // Song found, increase the number of likes by 1
+            int currentLikes = likes.get(index);
+            likes.set(index, currentLikes + 1);
+        }
+    }
+    public void removeLikeFromSong(String songName) {
+        int index = likedSongs.indexOf(songName);
+
+        if (index != -1) {
+            // Song found, decrease the number of likes by 1
+            int currentLikes = likes.get(index);
+
+            if (currentLikes > 0) {
+                likes.set(index, currentLikes - 1);
+            }
+
+            // If the number of likes reaches 0, remove the song
+            if (currentLikes == 1) {
+                likedSongs.remove(index);
+                likes.remove(index);
+            }
+        }
+    }
 
 }

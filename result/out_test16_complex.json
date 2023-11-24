@@ -9405,7 +9405,8 @@
 }, {
   "command" : "showPreferredSongs",
   "user" : "alice22",
-  "timestamp" : 8480
+  "timestamp" : 8480,
+  "result" : [ ]
 }, {
   "command" : "showPlaylists",
   "user" : "bob35",
@@ -9424,7 +9425,8 @@
 }, {
   "command" : "showPreferredSongs",
   "user" : "bob35",
-  "timestamp" : 8490
+  "timestamp" : 8490,
+  "result" : [ ]
 }, {
   "command" : "showPlaylists",
   "user" : "carol19",
@@ -9443,7 +9445,8 @@
 }, {
   "command" : "showPreferredSongs",
   "user" : "carol19",
-  "timestamp" : 8500
+  "timestamp" : 8500,
+  "result" : [ ]
 }, {
   "command" : "showPlaylists",
   "user" : "david27",
@@ -9462,7 +9465,8 @@
 }, {
   "command" : "showPreferredSongs",
   "user" : "david27",
-  "timestamp" : 8510
+  "timestamp" : 8510,
+  "result" : [ ]
 }, {
   "command" : "showPlaylists",
   "user" : "emily30",
@@ -9481,7 +9485,8 @@
 }, {
   "command" : "showPreferredSongs",
   "user" : "emily30",
-  "timestamp" : 8520
+  "timestamp" : 8520,
+  "result" : [ ]
 }, {
   "command" : "showPlaylists",
   "user" : "frank21",
@@ -9500,7 +9505,8 @@
 }, {
   "command" : "showPreferredSongs",
   "user" : "frank21",
-  "timestamp" : 8530
+  "timestamp" : 8530,
+  "result" : [ ]
 }, {
   "command" : "showPlaylists",
   "user" : "grace25",
@@ -9519,7 +9525,8 @@
 }, {
   "command" : "showPreferredSongs",
   "user" : "grace25",
-  "timestamp" : 8540
+  "timestamp" : 8540,
+  "result" : [ ]
 }, {
   "command" : "showPlaylists",
   "user" : "henry26",
@@ -9538,7 +9545,8 @@
 }, {
   "command" : "showPreferredSongs",
   "user" : "henry26",
-  "timestamp" : 8550
+  "timestamp" : 8550,
+  "result" : [ ]
 }, {
   "command" : "showPlaylists",
   "user" : "irene33",
@@ -9557,7 +9565,8 @@
 }, {
   "command" : "showPreferredSongs",
   "user" : "irene33",
-  "timestamp" : 8560
+  "timestamp" : 8560,
+  "result" : [ ]
 }, {
   "command" : "showPlaylists",
   "user" : "jack29",
@@ -9576,5 +9585,14 @@
 }, {
   "command" : "showPreferredSongs",
   "user" : "jack29",
+  "timestamp" : 8570,
+  "result" : [ ]
+}, {
+  "command" : "getTop5Playlists",
+  "result" : [ "Vibey Melodies Trek #2", "Vibey Sounds Expedition #1", "Electric Harmonies Dream #1", "Breezy Vibes Quest #1", "Electric Rhythms Quest #2" ],
+  "timestamp" : 8570
+}, {
+  "command" : "getTop5Songs",
+  "result" : [ "Shape of You", "Don't", "Stairway to Heaven", "Money Trees", "Under Pressure" ],
   "timestamp" : 8570
 } ]

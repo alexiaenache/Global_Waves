@@ -73,7 +73,7 @@ public final class Main {
      */
     public static void action(final String filePathInput,
                               final String filePathOutput) throws IOException {
-//        if(!filePathInput.equals("test14_searchPlaylist_follow_error.json")) return;
+//        if(!filePathInput.equals("test15_statistics.json")) return;
         ObjectMapper objectMapper = new ObjectMapper();
         LibraryInput library = objectMapper.readValue(new File(LIBRARY_PATH), LibraryInput.class);
         ArrayNode outputs = objectMapper.createArrayNode();
@@ -151,7 +151,16 @@ public final class Main {
                     ((SwitchVisibility) c).setSwitchVisibility(commands.get(i));
                     ((SwitchVisibility) c).run(p);
                     break;
-
+                case "getTop5Playlists":
+                    c = new GetTop5Playlists();
+                    ((GetTop5Playlists) c).setGetTop5Playlists(commands.get(i));
+                    ((GetTop5Playlists) c).run(p);
+                    break;
+                case "getTop5Songs":
+                    c = new GetTop5Songs();
+                    ((GetTop5Songs) c).setGetTop5Songs(commands.get(i));
+                    ((GetTop5Songs) c).run(p);
+                    break;
             }
         }
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
