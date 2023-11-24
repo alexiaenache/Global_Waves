@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class Player {
     private LibraryInput lib;
     private ArrayList<UserClass> users;
+    private ArrayList<Playlist> playlists;
     private ObjectMapper mapper;
     private ArrayNode output;
 
@@ -32,6 +33,7 @@ public class Player {
                 this.users.get(i).removeSearchedPodcasts();
                 this.users.get(i).setLastTimestamp(Integer.valueOf(timestamp));
                 this.addOutputSearchMapper(this.users.get(i));
+                users.get(i).setSearched(true);
             }
         }
     }
@@ -42,6 +44,7 @@ public class Player {
                 this.users.get(i).removeSearchedSongs();
                 this.users.get(i).setLastTimestamp(Integer.valueOf(timestamp));
                 this.addOutputSearchMapper(this.users.get(i));
+                users.get(i).setSearched(true);
             }
         }
     }
@@ -73,8 +76,8 @@ public class Player {
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
         int no = 0;
-        if (user.getPlaylists() != null) {
-            no = user.getPlaylists().size();
+        if (user.getSearchedPlaylists() != null) {
+            no = user.getSearchedPlaylists().size();
         }
         node.put("message", "Search returned " + no + " results");
         ArrayList<String> playlistNames = new ArrayList<>();
@@ -92,32 +95,19 @@ public class Player {
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
         String message;
-        boolean isSongs, isPodcasts, isPlaylists;
-        if (user.getSearchedSongs() == null || user.getSearchedSongs().isEmpty()) {
-            isSongs = false;
-        } else {
-            isSongs = true;
-        }
-        if (user.getSearchedPodcasts() == null || user.getSearchedPodcasts().isEmpty()) {
-            isPodcasts = false;
-        } else {
-            isPodcasts = true;
-        }
-        if (user.getSearchedPlaylists() == null || user.getSearchedPlaylists().isEmpty()) {
-            isPlaylists = false;
-        } else {
-            isPlaylists = true;
-        }
-        if (isSongs || isPodcasts || isPlaylists) {
+        if (user.isSearched()) {
             if (successfulSelect) {
                 message = "Successfully selected " + user.getSelectedSearch() + ".";
             } else {
                 message = "The selected ID is too high.";
+                user.setSuccessfulSelect(false);
             }
         } else {
             message = "Please conduct a search before making a selection.";
+            user.setSuccessfulSelect(false);
         }
         node.put("message", message);
+        user.setSearched(false);
         this.output.add(node);
     }
     public void addOutputLoadMapper(UserClass user) {
@@ -257,6 +247,22 @@ public class Player {
         this.output.add(node);
     }
 
+    public void addOutputFollow(UserClass user, String message) {
+        ObjectNode node = this.mapper.createObjectNode();
+        node.put("command", "follow");
+        node.put("message", message);
+        node.put("timestamp", user.getLastTimestamp());
+        node.put("user", user.getUsername());
+        this.output.add(node);
+    }
+    public void addOutputSwitchVisibility(UserClass user, String message) {
+        ObjectNode node = this.mapper.createObjectNode();
+        node.put("command", "switchVisibility");
+        node.put("user", user.getUsername());
+        node.put("timestamp", user.getLastTimestamp());
+        node.put("message", message);
+        this.output.add(node);
+    }
     public ArrayNode getOutput() {
         return output;
     }
@@ -278,6 +284,17 @@ public class Player {
 
     public void setUsers(ArrayList<UserClass> users) {
         this.users = users;
+    }
+
+    public ArrayList<Playlist> getPlaylists() {
+        return playlists;
+    }
+
+    public void setPlaylists(ArrayList<Playlist> playlists) {
+        this.playlists = playlists;
+    }
+    public void addInPlaylists(Playlist playlist) {
+        this.playlists.add(playlist);
     }
 
 

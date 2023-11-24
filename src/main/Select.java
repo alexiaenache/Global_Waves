@@ -39,7 +39,6 @@ public class Select extends Command {
                 }
             }
         }
-
        player.addOutputSelectMapper(u, u.isSuccessfulSelect());
 
     }

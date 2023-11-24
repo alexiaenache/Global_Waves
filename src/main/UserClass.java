@@ -22,6 +22,7 @@ public class UserClass {
         private boolean shuffle = false;
         private int repeat = 0;
         private boolean paused = false;
+        private boolean searched = false;
         private int lastPlayPause = 0;
         private int remainedTime = 0;
         private int lastPlay = 0;
@@ -31,6 +32,14 @@ public class UserClass {
         private ArrayList<SongInput> likedSongs;
         private ArrayList<Playlist> playlists;
         private Integer playedPodcastForTime = 0;
+
+    public boolean isSearched() {
+        return searched;
+    }
+
+    public void setSearched(boolean searched) {
+        this.searched = searched;
+    }
 
     public Integer getPlayedPodcastForTime() {
         return playedPodcastForTime;

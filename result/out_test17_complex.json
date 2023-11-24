@@ -4,6 +4,11 @@
   "timestamp" : 100,
   "message" : "Playlist created successfully."
 }, {
+  "command" : "switchVisibility",
+  "user" : "bob35",
+  "timestamp" : 110,
+  "message" : "The specified playlist ID is too high."
+}, {
   "command" : "createPlaylist",
   "user" : "bob35",
   "timestamp" : 110,
@@ -18,6 +23,11 @@
   "user" : "david27",
   "timestamp" : 130,
   "message" : "Playlist created successfully."
+}, {
+  "command" : "switchVisibility",
+  "user" : "emily30",
+  "timestamp" : 140,
+  "message" : "The specified playlist ID is too high."
 }, {
   "command" : "createPlaylist",
   "user" : "emily30",
@@ -59,6 +69,11 @@
   "timestamp" : 210,
   "message" : "Playlist created successfully."
 }, {
+  "command" : "switchVisibility",
+  "user" : "carol19",
+  "timestamp" : 220,
+  "message" : "The specified playlist ID is too high."
+}, {
   "command" : "createPlaylist",
   "user" : "carol19",
   "timestamp" : 220,
@@ -74,6 +89,11 @@
   "timestamp" : 240,
   "message" : "Playlist created successfully."
 }, {
+  "command" : "switchVisibility",
+  "user" : "frank21",
+  "timestamp" : 250,
+  "message" : "The specified playlist ID is too high."
+}, {
   "command" : "createPlaylist",
   "user" : "frank21",
   "timestamp" : 250,
@@ -88,6 +108,11 @@
   "user" : "henry26",
   "timestamp" : 270,
   "message" : "Playlist created successfully."
+}, {
+  "command" : "switchVisibility",
+  "user" : "irene33",
+  "timestamp" : 280,
+  "message" : "The specified playlist ID is too high."
 }, {
   "command" : "createPlaylist",
   "user" : "irene33",
@@ -108,7 +133,7 @@
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 305,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "alice22",
@@ -150,7 +175,7 @@
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 355,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "alice22",
@@ -381,7 +406,7 @@
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 630,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "alice22",
@@ -423,7 +448,7 @@
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 680,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "alice22",
@@ -465,7 +490,7 @@
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 730,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "alice22",
@@ -486,7 +511,7 @@
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 755,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "alice22",
@@ -633,7 +658,7 @@
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 930,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "bob35",
@@ -843,7 +868,7 @@
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 1180,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "bob35",
@@ -1032,7 +1057,7 @@
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 1405,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "carol19",
@@ -1116,7 +1141,7 @@
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 1505,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "carol19",
@@ -1452,7 +1477,7 @@
   "command" : "select",
   "user" : "david27",
   "timestamp" : 1905,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -1641,7 +1666,7 @@
   "command" : "select",
   "user" : "david27",
   "timestamp" : 2130,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -1662,7 +1687,7 @@
   "command" : "select",
   "user" : "david27",
   "timestamp" : 2155,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -1683,7 +1708,7 @@
   "command" : "select",
   "user" : "david27",
   "timestamp" : 2180,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "david27",
@@ -1788,7 +1813,7 @@
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 2305,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "emily30",
@@ -1809,7 +1834,7 @@
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 2330,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "emily30",
@@ -1893,7 +1918,7 @@
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 2430,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "emily30",
@@ -1914,7 +1939,7 @@
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 2455,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "emily30",
@@ -2061,7 +2086,7 @@
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 2630,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "emily30",
@@ -2082,7 +2107,7 @@
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 2655,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "emily30",
@@ -2166,7 +2191,7 @@
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 2755,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "emily30",
@@ -2208,7 +2233,7 @@
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 2805,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "frank21",
@@ -2229,7 +2254,7 @@
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 2830,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "frank21",
@@ -2334,7 +2359,7 @@
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 2955,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "frank21",
@@ -2355,7 +2380,7 @@
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 2980,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "frank21",
@@ -2439,7 +2464,7 @@
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 3080,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "frank21",
@@ -2481,7 +2506,7 @@
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 3130,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "frank21",
@@ -2691,7 +2716,7 @@
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 3380,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "grace25",
@@ -2733,7 +2758,7 @@
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 3430,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "grace25",
@@ -3069,7 +3094,7 @@
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 3830,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "henry26",
@@ -3090,7 +3115,7 @@
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 3855,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "henry26",
@@ -3111,7 +3136,7 @@
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 3880,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "henry26",
@@ -3216,7 +3241,7 @@
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 4005,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "henry26",
@@ -3279,7 +3304,7 @@
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 4080,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "henry26",
@@ -3342,7 +3367,7 @@
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 4155,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "henry26",
@@ -3384,7 +3409,7 @@
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 4205,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "henry26",
@@ -3405,7 +3430,7 @@
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 4230,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "henry26",
@@ -3741,7 +3766,7 @@
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 4630,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "irene33",
@@ -3993,7 +4018,7 @@
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 4930,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "jack29",
@@ -4056,7 +4081,7 @@
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 5005,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "jack29",
@@ -4140,7 +4165,7 @@
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 5105,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
 }, {
   "command" : "load",
   "user" : "jack29",
@@ -4647,6 +4672,11 @@
     "paused" : false
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "david27",
+  "timestamp" : 5520,
+  "message" : "The specified playlist ID is too high."
+}, {
   "command" : "addRemoveInPlaylist",
   "user" : "david27",
   "timestamp" : 5520,
@@ -4662,6 +4692,11 @@
     "shuffle" : false,
     "paused" : false
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "emily30",
+  "timestamp" : 5530,
+  "message" : "The specified playlist ID is too high."
 }, {
   "command" : "status",
   "user" : "emily30",
@@ -4788,6 +4823,11 @@
     "paused" : true
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "carol19",
+  "timestamp" : 5610,
+  "message" : "Visibility status updated successfully to private."
+}, {
   "command" : "status",
   "user" : "carol19",
   "timestamp" : 5610,
@@ -4821,6 +4861,11 @@
     "paused" : false
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "emily30",
+  "timestamp" : 5630,
+  "message" : "Visibility status updated successfully to private."
+}, {
   "command" : "status",
   "user" : "emily30",
   "timestamp" : 5630,
@@ -4831,6 +4876,11 @@
     "shuffle" : false,
     "paused" : false
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "frank21",
+  "timestamp" : 5640,
+  "message" : "Visibility status updated successfully to private."
 }, {
   "command" : "status",
   "user" : "frank21",
@@ -4892,6 +4942,11 @@
     "paused" : false
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "jack29",
+  "timestamp" : 5680,
+  "message" : "Visibility status updated successfully to private."
+}, {
   "command" : "status",
   "user" : "jack29",
   "timestamp" : 5680,
@@ -4903,6 +4958,11 @@
     "paused" : false
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "alice22",
+  "timestamp" : 5690,
+  "message" : "The specified playlist ID is too high."
+}, {
   "command" : "status",
   "user" : "alice22",
   "timestamp" : 5690,
@@ -4913,6 +4973,11 @@
     "shuffle" : false,
     "paused" : false
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "bob35",
+  "timestamp" : 5700,
+  "message" : "The specified playlist ID is too high."
 }, {
   "command" : "status",
   "user" : "bob35",
@@ -4935,6 +5000,11 @@
     "shuffle" : false,
     "paused" : false
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "david27",
+  "timestamp" : 5720,
+  "message" : "The specified playlist ID is too high."
 }, {
   "command" : "addRemoveInPlaylist",
   "user" : "david27",
@@ -5381,6 +5451,11 @@
     "paused" : true
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "david27",
+  "timestamp" : 6020,
+  "message" : "Visibility status updated successfully to private."
+}, {
   "command" : "status",
   "user" : "david27",
   "timestamp" : 6020,
@@ -5451,6 +5526,11 @@
     "shuffle" : false,
     "paused" : true
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "irene33",
+  "timestamp" : 6070,
+  "message" : "The specified playlist ID is too high."
 }, {
   "command" : "status",
   "user" : "irene33",
@@ -5539,6 +5619,11 @@
     "shuffle" : false,
     "paused" : true
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "emily30",
+  "timestamp" : 6130,
+  "message" : "The specified playlist ID is too high."
 }, {
   "command" : "like",
   "user" : "emily30",
@@ -5653,6 +5738,11 @@
     "paused" : true
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "bob35",
+  "timestamp" : 6200,
+  "message" : "Visibility status updated successfully to private."
+}, {
   "command" : "status",
   "user" : "bob35",
   "timestamp" : 6200,
@@ -5663,6 +5753,11 @@
     "shuffle" : false,
     "paused" : true
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "carol19",
+  "timestamp" : 6210,
+  "message" : "Visibility status updated successfully to private."
 }, {
   "command" : "playPause",
   "user" : "carol19",
@@ -5711,6 +5806,11 @@
     "shuffle" : false,
     "paused" : false
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "frank21",
+  "timestamp" : 6240,
+  "message" : "The specified playlist ID is too high."
 }, {
   "command" : "status",
   "user" : "frank21",
@@ -5870,6 +5970,11 @@
     "paused" : false
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "frank21",
+  "timestamp" : 6340,
+  "message" : "Visibility status updated successfully to private."
+}, {
   "command" : "like",
   "user" : "frank21",
   "timestamp" : 6340,
@@ -5885,6 +5990,11 @@
     "shuffle" : false,
     "paused" : false
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "grace25",
+  "timestamp" : 6350,
+  "message" : "Visibility status updated successfully to private."
 }, {
   "command" : "status",
   "user" : "grace25",
@@ -5912,6 +6022,11 @@
     "shuffle" : false,
     "paused" : true
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "irene33",
+  "timestamp" : 6370,
+  "message" : "Visibility status updated successfully to private."
 }, {
   "command" : "status",
   "user" : "irene33",
@@ -6000,6 +6115,11 @@
     "paused" : false
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "emily30",
+  "timestamp" : 6430,
+  "message" : "Visibility status updated successfully to private."
+}, {
   "command" : "playPause",
   "user" : "emily30",
   "timestamp" : 6430,
@@ -6016,6 +6136,11 @@
     "paused" : true
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "frank21",
+  "timestamp" : 6440,
+  "message" : "The specified playlist ID is too high."
+}, {
   "command" : "like",
   "user" : "frank21",
   "timestamp" : 6440,
@@ -6031,6 +6156,11 @@
     "shuffle" : false,
     "paused" : false
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "grace25",
+  "timestamp" : 6450,
+  "message" : "Visibility status updated successfully to public."
 }, {
   "command" : "status",
   "user" : "grace25",
@@ -6202,6 +6332,11 @@
     "paused" : true
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "irene33",
+  "timestamp" : 6570,
+  "message" : "Visibility status updated successfully to private."
+}, {
   "command" : "addRemoveInPlaylist",
   "user" : "irene33",
   "timestamp" : 6570,
@@ -6240,6 +6375,11 @@
     "paused" : false
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "alice22",
+  "timestamp" : 6590,
+  "message" : "Visibility status updated successfully to private."
+}, {
   "command" : "status",
   "user" : "alice22",
   "timestamp" : 6590,
@@ -6272,6 +6412,11 @@
     "shuffle" : false,
     "paused" : false
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "david27",
+  "timestamp" : 6620,
+  "message" : "The specified playlist ID is too high."
 }, {
   "command" : "status",
   "user" : "david27",
@@ -6337,6 +6482,11 @@
     "shuffle" : false,
     "paused" : true
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "irene33",
+  "timestamp" : 6670,
+  "message" : "Visibility status updated successfully to public."
 }, {
   "command" : "like",
   "user" : "irene33",
@@ -6484,6 +6634,11 @@
     "paused" : true
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "jack29",
+  "timestamp" : 6780,
+  "message" : "The specified playlist ID is too high."
+}, {
   "command" : "like",
   "user" : "jack29",
   "timestamp" : 6780,
@@ -6575,6 +6730,11 @@
     "paused" : true
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "frank21",
+  "timestamp" : 6840,
+  "message" : "Visibility status updated successfully to public."
+}, {
   "command" : "status",
   "user" : "frank21",
   "timestamp" : 6840,
@@ -6639,6 +6799,11 @@
     "shuffle" : false,
     "paused" : true
   }
+}, {
+  "command" : "switchVisibility",
+  "user" : "alice22",
+  "timestamp" : 6890,
+  "message" : "Visibility status updated successfully to private."
 }, {
   "command" : "playPause",
   "user" : "alice22",
@@ -6764,6 +6929,11 @@
     "paused" : true
   }
 }, {
+  "command" : "switchVisibility",
+  "user" : "irene33",
+  "timestamp" : 6970,
+  "message" : "The specified playlist ID is too high."
+}, {
   "command" : "status",
   "user" : "irene33",
   "timestamp" : 6970,
@@ -6795,287 +6965,417 @@
   "user" : "alice22",
   "timestamp" : 6980,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 6980,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 6980,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 6990,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 6990,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 6990,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 7000,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 7000,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Groovy Tracks Dream #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7000,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 7010,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Rhythms Trek #2" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 7010,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7010,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 7020,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 7020,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7020,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 7030,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 7030,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Tunes Expedition #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7030,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
   "timestamp" : 7040,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 7040,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7040,
+  "user" : "grace25"
 }, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 7050,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 7050,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7050,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 7060,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 7060,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Tunes Expedition #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7060,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 7070,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 7070,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7070,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 7080,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 7080,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Tunes Expedition #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7080,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 7090,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 7090,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Tunes Expedition #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7090,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 7100,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 7100,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Tunes Expedition #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7100,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 7110,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 7110,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7110,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 7120,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Rhythms Trek #2" ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 7120,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Rhythms Trek #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7120,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 7130,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Rhythms Trek #2" ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 7130,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Rhythms Trek #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7130,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
   "timestamp" : 7140,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 7140,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7140,
+  "user" : "grace25"
 }, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 7150,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 7150,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7150,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 7160,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 7160,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7160,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 7170,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 7170,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7170,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 7180,
-  "message" : "Search returned 2 results",
-  "results" : [ "Breezy Vibes Voyage #1", "Electric Tunes Adventure #2" ]
+  "message" : "Search returned 0 results",
+  "results" : [ ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 7180,
-  "message" : "Successfully selected Electric Tunes Adventure #2."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7180,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 7190,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 7190,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7190,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 7200,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Epic Sounds Dream #1" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 7200,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7200,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 7210,
-  "message" : "Search returned 2 results",
-  "results" : [ "Vibey Sounds Safari #1", "Dynamic Melodies Voyage #2" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 7210,
-  "message" : "Successfully selected Dynamic Melodies Voyage #2."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7210,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 7220,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 7220,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7220,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 7230,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Rhythms Trek #2" ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 7230,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7230,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -7088,1204 +7388,1754 @@
   "timestamp" : 7240,
   "message" : "The selected ID is too high."
 }, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7240,
+  "user" : "grace25"
+}, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 7250,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 7250,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7250,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 7260,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 7260,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7260,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 7270,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 7270,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Melodies Voyage #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7270,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 7280,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 7280,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7280,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 7290,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 7290,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7290,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 7300,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 7300,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Melodies Voyage #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7300,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 7310,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 7310,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7310,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 7320,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 7320,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7320,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 7330,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 7330,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Epic Harmonies Journey #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7330,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
   "timestamp" : 7340,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 7340,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7340,
+  "user" : "grace25"
 }, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 7350,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 7350,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7350,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 7360,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 7360,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Rhythms Quest #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7360,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 7370,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 7370,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7370,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 7380,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Epic Sounds Dream #1" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 7380,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7380,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 7390,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 7390,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7390,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 7400,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 7400,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7400,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 7410,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 7410,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7410,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 7420,
-  "message" : "Search returned 2 results",
-  "results" : [ "Groovy Bangers Escape #1", "Vibey Harmonies Safari #2" ]
+  "message" : "Search returned 0 results",
+  "results" : [ ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 7420,
-  "message" : "Successfully selected Vibey Harmonies Safari #2."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7420,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 7430,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 7430,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7430,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
   "timestamp" : 7440,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 7440,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7440,
+  "user" : "grace25"
 }, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 7450,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Epic Sounds Dream #1" ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 7450,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7450,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 7460,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 7460,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Bangers Odyssey #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7460,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 7470,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 7470,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7470,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 7480,
-  "message" : "Search returned 2 results",
-  "results" : [ "Breezy Vibes Voyage #1", "Electric Tunes Adventure #2" ]
+  "message" : "Search returned 0 results",
+  "results" : [ ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 7480,
-  "message" : "Successfully selected Electric Tunes Adventure #2."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7480,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 7490,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 7490,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7490,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 7500,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 7500,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Groovy Tracks Dream #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7500,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 7510,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 7510,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7510,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 7520,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 7520,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Groovy Tracks Dream #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7520,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 7530,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 7530,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Bangers Escape #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7530,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
   "timestamp" : 7540,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 7540,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7540,
+  "user" : "grace25"
 }, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 7550,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 7550,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7550,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 7560,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 7560,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Epic Harmonies Journey #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7560,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 7570,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 7570,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Rhythms Quest #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7570,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 7580,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 7580,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Melodies Voyage #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7580,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 7590,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 7590,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7590,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 7600,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 7600,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Bangers Escape #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7600,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 7610,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 7610,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7610,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 7620,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Rhythms Trek #2" ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 7620,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7620,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 7630,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 7630,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7630,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
   "timestamp" : 7640,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 7640,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7640,
+  "user" : "grace25"
 }, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 7650,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Rhythms Trek #2" ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 7650,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Rhythms Trek #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7650,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 7660,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 7660,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7660,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 7670,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 7670,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7670,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 7680,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Rhythms Trek #2" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 7680,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Rhythms Trek #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7680,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 7690,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 7690,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7690,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 7700,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 7700,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Groovy Tracks Dream #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7700,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 7710,
-  "message" : "Search returned 2 results",
-  "results" : [ "Vibey Sounds Safari #1", "Dynamic Melodies Voyage #2" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 7710,
   "message" : "The selected ID is too high."
 }, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7710,
+  "user" : "david27"
+}, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 7720,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 7720,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7720,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 7730,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 7730,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Melodies Voyage #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7730,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
   "timestamp" : 7740,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 7740,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Rhythms Quest #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7740,
+  "user" : "grace25"
 }, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 7750,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Rhythms Trek #2" ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 7750,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7750,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 7760,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 7760,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Bangers Escape #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7760,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 7770,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 7770,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7770,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 7780,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Epic Sounds Dream #1" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 7780,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Epic Sounds Dream #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7780,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 7790,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Rhythms Trek #2" ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 7790,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7790,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 7800,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 7800,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Rhythms Quest #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7800,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 7810,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Rhythms Trek #2" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 7810,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Rhythms Trek #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7810,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 7820,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 7820,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7820,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 7830,
-  "message" : "Search returned 2 results",
-  "results" : [ "Vibey Tracks Dream #1", "Breezy Rhythms Quest #2" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 7830,
-  "message" : "Successfully selected Vibey Tracks Dream #1."
+  "message" : "Successfully selected Breezy Rhythms Quest #2."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7830,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
   "timestamp" : 7840,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 7840,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7840,
+  "user" : "grace25"
 }, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 7850,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 7850,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7850,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 7860,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 7860,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Epic Harmonies Journey #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7860,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 7870,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 7870,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7870,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 7880,
-  "message" : "Search returned 2 results",
-  "results" : [ "Breezy Vibes Voyage #1", "Electric Tunes Adventure #2" ]
-}, {
-  "command" : "select",
-  "user" : "alice22",
-  "timestamp" : 7880,
-  "message" : "Successfully selected Breezy Vibes Voyage #1."
-}, {
-  "command" : "search",
-  "user" : "bob35",
-  "timestamp" : 7890,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
+  "user" : "alice22",
+  "timestamp" : 7880,
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7880,
+  "user" : "alice22"
+}, {
+  "command" : "search",
   "user" : "bob35",
   "timestamp" : 7890,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
+}, {
+  "command" : "select",
+  "user" : "bob35",
+  "timestamp" : 7890,
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7890,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 7900,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 7900,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Bangers Odyssey #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7900,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 7910,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 7910,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Rhythms Quest #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7910,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 7920,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 7920,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Melodies Voyage #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7920,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 7930,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 7930,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 7930,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
   "timestamp" : 7940,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Rhythms Trek #2" ]
 }, {
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 7940,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Rhythms Trek #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7940,
+  "user" : "grace25"
 }, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 7950,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 7950,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Melodies Voyage #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7950,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 7960,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 7960,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7960,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 7970,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Epic Sounds Dream #1" ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 7970,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7970,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 7980,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 7980,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 7980,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 7990,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 7990,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 7990,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 8000,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 8000,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8000,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 8010,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Epic Sounds Dream #1" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 8010,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Epic Sounds Dream #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8010,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 8020,
-  "message" : "Search returned 2 results",
-  "results" : [ "Groovy Bangers Escape #1", "Vibey Harmonies Safari #2" ]
+  "message" : "Search returned 0 results",
+  "results" : [ ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 8020,
   "message" : "The selected ID is too high."
 }, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8020,
+  "user" : "emily30"
+}, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 8030,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 8030,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Epic Harmonies Journey #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8030,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
   "timestamp" : 8040,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 8040,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8040,
+  "user" : "grace25"
 }, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 8050,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 8050,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8050,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 8060,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 8060,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8060,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 8070,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 8070,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8070,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 8080,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 8080,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Bangers Odyssey #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8080,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 8090,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 8090,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8090,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 8100,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 8100,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8100,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 8110,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 8110,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8110,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 8120,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Rhythms Trek #2" ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 8120,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Rhythms Trek #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8120,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 8130,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 8130,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8130,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
   "timestamp" : 8140,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 8140,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8140,
+  "user" : "grace25"
 }, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 8150,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 8150,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Melodies Voyage #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8150,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 8160,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 8160,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Bangers Escape #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8160,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 8170,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 8170,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8170,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 8180,
-  "message" : "Search returned 2 results",
-  "results" : [ "Breezy Vibes Voyage #1", "Electric Tunes Adventure #2" ]
+  "message" : "Search returned 0 results",
+  "results" : [ ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 8180,
-  "message" : "Successfully selected Breezy Vibes Voyage #1."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8180,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 8190,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 8190,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Bangers Odyssey #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8190,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 8200,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 8200,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8200,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 8210,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 8210,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Rhythms Quest #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8210,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 8220,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 8220,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Rhythms Quest #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8220,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 8230,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 8230,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8230,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
   "timestamp" : 8240,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 8240,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8240,
+  "user" : "grace25"
 }, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 8250,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 8250,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8250,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 8260,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 8260,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8260,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 8270,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 8270,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8270,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 8280,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 8280,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8280,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 8290,
-  "message" : "Search returned 2 results",
-  "results" : [ "Epic Sounds Dream #1", "Stellar Harmonies Adventure #2" ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Epic Sounds Dream #1" ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 8290,
-  "message" : "Successfully selected Stellar Harmonies Adventure #2."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8290,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 8300,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 8300,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Dynamic Bangers Escape #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8300,
+  "user" : "carol19"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 8310,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 8310,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8310,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 8320,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 8320,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8320,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 8330,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Groovy Tracks Dream #1" ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 8330,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Groovy Tracks Dream #1."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8330,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
@@ -8298,148 +9148,218 @@
   "timestamp" : 8340,
   "message" : "Successfully selected Epic Harmonies Journey #1."
 }, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 8340,
+  "user" : "grace25"
+}, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 8350,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 8350,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8350,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 8360,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Dynamic Melodies Voyage #2" ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 8360,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8360,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 8370,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 8370,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8370,
+  "user" : "jack29"
 }, {
   "command" : "search",
   "user" : "alice22",
   "timestamp" : 8380,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "alice22",
   "timestamp" : 8380,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Bangers Odyssey #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8380,
+  "user" : "alice22"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 8390,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 8390,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8390,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "carol19",
   "timestamp" : 8400,
-  "message" : "Search returned 2 results",
-  "results" : [ "Stellar Sounds Expedition #1", "Groovy Beats Journey #2" ]
+  "message" : "Search returned 0 results",
+  "results" : [ ]
 }, {
   "command" : "select",
   "user" : "carol19",
   "timestamp" : 8400,
   "message" : "The selected ID is too high."
 }, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8400,
+  "user" : "carol19"
+}, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 8410,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 8410,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8410,
+  "user" : "david27"
 }, {
   "command" : "search",
   "user" : "emily30",
   "timestamp" : 8420,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 8420,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8420,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "frank21",
   "timestamp" : 8430,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "frank21",
   "timestamp" : 8430,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8430,
+  "user" : "frank21"
 }, {
   "command" : "search",
   "user" : "grace25",
   "timestamp" : 8440,
-  "message" : "Search returned 2 results",
+  "message" : "Search returned 0 results",
   "results" : [ ]
 }, {
   "command" : "select",
   "user" : "grace25",
   "timestamp" : 8440,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "You cannot follow or unfollow your own playlist.",
+  "timestamp" : 8440,
+  "user" : "grace25"
 }, {
   "command" : "search",
   "user" : "henry26",
   "timestamp" : 8450,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Epic Harmonies Journey #1", "Breezy Bangers Odyssey #2" ]
 }, {
   "command" : "select",
   "user" : "henry26",
   "timestamp" : 8450,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Breezy Bangers Odyssey #2."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8450,
+  "user" : "henry26"
 }, {
   "command" : "search",
   "user" : "irene33",
   "timestamp" : 8460,
-  "message" : "Search returned 2 results",
-  "results" : [ ]
+  "message" : "Search returned 1 results",
+  "results" : [ "Breezy Rhythms Quest #2" ]
 }, {
   "command" : "select",
   "user" : "irene33",
   "timestamp" : 8460,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 8460,
+  "user" : "irene33"
 }, {
   "command" : "search",
   "user" : "jack29",
   "timestamp" : 8470,
   "message" : "Search returned 2 results",
-  "results" : [ ]
+  "results" : [ "Dynamic Bangers Escape #1", "Breezy Tunes Expedition #2" ]
 }, {
   "command" : "select",
   "user" : "jack29",
   "timestamp" : 8470,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "The selected ID is too high."
+}, {
+  "command" : "follow",
+  "message" : "Playlist unfollowed successfully.",
+  "timestamp" : 8470,
+  "user" : "jack29"
 }, {
   "command" : "showPlaylists",
   "user" : "alice22",
@@ -8447,12 +9367,12 @@
   "result" : [ {
     "name" : "Breezy Vibes Voyage #1",
     "songs" : [ "Under Pressure", "Blank Space", "Stairway to Heaven" ],
-    "visibility" : "public",
+    "visibility" : "private",
     "followers" : 0
   }, {
     "name" : "Electric Tunes Adventure #2",
     "songs" : [ "The Unforgiven", "Gimme Shelter", "Castle on the Hill" ],
-    "visibility" : "public",
+    "visibility" : "private",
     "followers" : 0
   } ]
 }, {
@@ -8467,11 +9387,11 @@
     "name" : "Epic Sounds Dream #1",
     "songs" : [ "Shape of You", "Happier", "Begin Again", "Blank Space", "Sad But True", "Start Me Up", "Stairway to Heaven", "Bohemian Rhapsody" ],
     "visibility" : "public",
-    "followers" : 0
+    "followers" : 1
   }, {
     "name" : "Stellar Harmonies Adventure #2",
     "songs" : [ "Black Dog", "Don't", "Paint It Black", "Happier" ],
-    "visibility" : "public",
+    "visibility" : "private",
     "followers" : 0
   } ]
 }, {
@@ -8485,12 +9405,12 @@
   "result" : [ {
     "name" : "Stellar Sounds Expedition #1",
     "songs" : [ "The Unforgiven", "Maps", "Delicate", "Don't", "Whatever You Need", "The Man", "Love Story" ],
-    "visibility" : "public",
+    "visibility" : "private",
     "followers" : 0
   }, {
     "name" : "Groovy Beats Journey #2",
     "songs" : [ "Castle on the Hill", "Stairway to Heaven", "Black Dog", "Bohemian Rhapsody", "Gimme Shelter" ],
-    "visibility" : "public",
+    "visibility" : "private",
     "followers" : 0
   } ]
 }, {
@@ -8504,13 +9424,13 @@
   "result" : [ {
     "name" : "Vibey Sounds Safari #1",
     "songs" : [ "Shape of You", "Whatever You Need", "Castle on the Hill", "Start Me Up" ],
-    "visibility" : "public",
+    "visibility" : "private",
     "followers" : 0
   }, {
     "name" : "Dynamic Melodies Voyage #2",
     "songs" : [ "The Man", "Happier", "Shape of You", "Maps", "Start Me Up", "Angie", "Castle on the Hill", "Gimme Shelter" ],
     "visibility" : "public",
-    "followers" : 0
+    "followers" : 4
   } ]
 }, {
   "command" : "showPreferredSongs",
@@ -8523,12 +9443,12 @@
   "result" : [ {
     "name" : "Groovy Bangers Escape #1",
     "songs" : [ "Shape of You", "Under Pressure", "Stairway to Heaven", "Castle on the Hill", "Thinking Out Loud", "Bohemian Rhapsody" ],
-    "visibility" : "public",
+    "visibility" : "private",
     "followers" : 0
   }, {
     "name" : "Vibey Harmonies Safari #2",
     "songs" : [ "Blank Space", "Black Dog", "Gimme Shelter", "Angie", "Delicate", "The Man" ],
-    "visibility" : "public",
+    "visibility" : "private",
     "followers" : 0
   } ]
 }, {
@@ -8542,13 +9462,13 @@
   "result" : [ {
     "name" : "Vibey Tracks Dream #1",
     "songs" : [ "Sad But True", "Begin Again", "Blank Space" ],
-    "visibility" : "public",
+    "visibility" : "private",
     "followers" : 0
   }, {
     "name" : "Breezy Rhythms Quest #2",
     "songs" : [ "Gimme Shelter", "Whatever You Need", "Blank Space", "Big Pimpin'", "Under Pressure", "Maps" ],
     "visibility" : "public",
-    "followers" : 0
+    "followers" : 3
   } ]
 }, {
   "command" : "showPreferredSongs",
@@ -8562,12 +9482,12 @@
     "name" : "Epic Harmonies Journey #1",
     "songs" : [ "Angie", "Happier", "Begin Again", "Thinking Out Loud", "Start Me Up", "The Unforgiven" ],
     "visibility" : "public",
-    "followers" : 0
+    "followers" : 2
   }, {
     "name" : "Breezy Bangers Odyssey #2",
     "songs" : [ "Love Story", "Start Me Up", "Dream On", "Stairway to Heaven", "Shape of You", "The Unforgiven", "The Man", "Under Pressure" ],
     "visibility" : "public",
-    "followers" : 0
+    "followers" : 3
   } ]
 }, {
   "command" : "showPreferredSongs",
@@ -8581,12 +9501,12 @@
     "name" : "Dynamic Bangers Escape #1",
     "songs" : [ "Bohemian Rhapsody", "Shape of You", "Love Story" ],
     "visibility" : "public",
-    "followers" : 0
+    "followers" : 2
   }, {
     "name" : "Breezy Tunes Expedition #2",
     "songs" : [ "The Man", "Angie", "Under Pressure", "Blank Space", "Money Trees" ],
     "visibility" : "public",
-    "followers" : 0
+    "followers" : 4
   } ]
 }, {
   "command" : "showPreferredSongs",
@@ -8600,11 +9520,11 @@
     "name" : "Groovy Tracks Dream #1",
     "songs" : [ "Gimme Shelter", "Delicate", "The Man", "Start Me Up", "Whatever You Need" ],
     "visibility" : "public",
-    "followers" : 0
+    "followers" : 1
   }, {
     "name" : "Groovy Tracks Voyage #2",
     "songs" : [ "Stairway to Heaven", "Thinking Out Loud", "Dream On", "Blank Space", "Black Dog", "Paint It Black", "Castle on the Hill", "Start Me Up", "Under Pressure", "Love Story" ],
-    "visibility" : "public",
+    "visibility" : "private",
     "followers" : 0
   } ]
 }, {
@@ -8618,13 +9538,13 @@
   "result" : [ {
     "name" : "Chill Tunes Dream #1",
     "songs" : [ "Bohemian Rhapsody", "Stairway to Heaven", "Black Dog", "Love Story", "Happier", "Start Me Up", "Sad But True" ],
-    "visibility" : "public",
+    "visibility" : "private",
     "followers" : 0
   }, {
     "name" : "Dynamic Rhythms Trek #2",
     "songs" : [ "Don't", "Love Story", "Black Dog", "Maps", "Dream On" ],
     "visibility" : "public",
-    "followers" : 0
+    "followers" : 4
   } ]
 }, {
   "command" : "showPreferredSongs",

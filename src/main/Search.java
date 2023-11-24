@@ -94,7 +94,7 @@ public class Search extends Command {
     public ArrayList<SongInput> searchSongLyrics(ArrayList<SongInput> songs, String Lyrics) {
         ArrayList<SongInput> songsOutput = new ArrayList<>();
         for (SongInput song : songs) {
-            if (song.getLyrics().contains(Lyrics)) {
+            if (song.getLyrics().contains(Lyrics) || song.getLyrics().toUpperCase().contains(Lyrics)) {
                 songsOutput.add(song);
 
             }
@@ -231,7 +231,7 @@ public class Search extends Command {
             }
 
         }
-        playlists = user.getPlaylists();
+        playlists = player.getPlaylists();
         if (this.getFilters().getName() != null) {
             playlists = this.searchPlaylistName(playlists, this.getFilters().getName());
         } else if (this.getFilters().getOwner() != null) {
@@ -241,6 +241,7 @@ public class Search extends Command {
             playlists = new ArrayList<>(playlists.subList(0, 5));
         }
         user.setSearchedPlaylists(playlists);
+        user.setSearched(true);
         user.setLastTimestamp(Integer.valueOf(this.getTimestamp()));
         player.addOutputSearchPlaylistMapper(user);
     }
@@ -248,7 +249,7 @@ public class Search extends Command {
         ArrayList<Playlist> playlistsOutput = new ArrayList<>();
         if (playlists != null && !playlists.isEmpty()) {
             for (Playlist playlist : playlists) {
-                if (playlist.getName().startsWith(name)) {
+                if (playlist.getName().startsWith(name)  && playlist.isPublic()) {
                     playlistsOutput.add(playlist);
                 }
             }
@@ -259,7 +260,7 @@ public class Search extends Command {
         ArrayList<Playlist> playlistsOutput = new ArrayList<>();
         if (playlists != null && !playlists.isEmpty()) {
             for (Playlist playlist : playlists) {
-                if (playlist.getOwner().contains(owner)) {
+                if (playlist.getOwner().contains(owner) && playlist.isPublic()) {
                     playlistsOutput.add(playlist);
                 }
             }

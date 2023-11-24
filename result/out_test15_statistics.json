@@ -204,34 +204,49 @@
   "user" : "emily30",
   "timestamp" : 2460,
   "message" : "Search returned 1 results",
-  "results" : [ ]
+  "results" : [ "My first playlist" ]
 }, {
   "command" : "select",
   "user" : "emily30",
   "timestamp" : 2490,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected My first playlist."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 2520,
+  "user" : "emily30"
 }, {
   "command" : "search",
   "user" : "bob35",
   "timestamp" : 2565,
   "message" : "Search returned 1 results",
-  "results" : [ ]
+  "results" : [ "Just for fun" ]
 }, {
   "command" : "select",
   "user" : "bob35",
   "timestamp" : 2580,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Just for fun."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 2600,
+  "user" : "bob35"
 }, {
   "command" : "search",
   "user" : "david27",
   "timestamp" : 2765,
   "message" : "Search returned 1 results",
-  "results" : [ ]
+  "results" : [ "Just for fun" ]
 }, {
   "command" : "select",
   "user" : "david27",
   "timestamp" : 2810,
-  "message" : "Please conduct a search before making a selection."
+  "message" : "Successfully selected Just for fun."
+}, {
+  "command" : "follow",
+  "message" : "Playlist followed successfully.",
+  "timestamp" : 2850,
+  "user" : "david27"
 }, {
   "command" : "showPreferredSongs",
   "user" : "bob35",

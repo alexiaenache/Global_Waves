@@ -12,7 +12,7 @@ public class Playlist {
     private int followers = 0;
     private Integer duration;
     private Integer playedForTime = 0;
-
+    private ArrayList<UserClass> followersList = new ArrayList<>();
     public Integer getPlayedForTime() {
         return playedForTime;
     }
@@ -74,5 +74,16 @@ public class Playlist {
 
     public void setOwner(String owner) {
         this.owner = owner;
+    }
+
+    public ArrayList<UserClass> getFollowersList() {
+        return followersList;
+    }
+
+    public void setFollowersList(ArrayList<UserClass> followersList) {
+        this.followersList = followersList;
+    }
+    public void addFollower(UserClass user) {
+        followersList.add(user);
     }
 }

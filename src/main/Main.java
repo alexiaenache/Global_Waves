@@ -73,7 +73,7 @@ public final class Main {
      */
     public static void action(final String filePathInput,
                               final String filePathOutput) throws IOException {
-//        if(!filePathInput.equals("test05_playPause_playlist_podcast.json")) return;
+//        if(!filePathInput.equals("test14_searchPlaylist_follow_error.json")) return;
         ObjectMapper objectMapper = new ObjectMapper();
         LibraryInput library = objectMapper.readValue(new File(LIBRARY_PATH), LibraryInput.class);
         ArrayNode outputs = objectMapper.createArrayNode();
@@ -83,6 +83,7 @@ public final class Main {
         ObjectMapper mapper = new ObjectMapper();
         Player p = new Player();
         p.setLib(library);
+        p.setPlaylists(new ArrayList<>());
         p.setMapper(mapper);
         ArrayNode output = mapper.createArrayNode();
         p.setOutput(output);
@@ -139,6 +140,16 @@ public final class Main {
                     c = new ShowPreferredSongs();
                     ((ShowPreferredSongs) c).setShowPreferredSongs(commands.get(i));
                     ((ShowPreferredSongs) c).run(p);
+                    break;
+                case "follow":
+                    c = new Follow();
+                    ((Follow) c).setFollow(commands.get(i));
+                    ((Follow) c).run(p);
+                    break;
+                case "switchVisibility":
+                    c = new SwitchVisibility();
+                    ((SwitchVisibility) c).setSwitchVisibility(commands.get(i));
+                    ((SwitchVisibility) c).run(p);
                     break;
 
             }
