@@ -1,0 +1,59 @@
+    The structure of the app:
+    The classes Command and Filters are used to read the input file.
+    The Player class represents an application that manages libraries, users, playlists,
+and various commands related to audio player. Here are the methods that generate an output,
+the data base of the application (the library and the playlists) and the users. There is a
+specialized method for each command. The methods are called from the main method for that
+command.
+    The classes AddRemoveInPlaylist, CreatePlaylist, Follow, GetTop5Playlists, GetTop5Songs,
+Like, Load, PlayPause, Search, Select, ShowPlaylists, ShowPrefferredSongs, Status and
+SwitchVisibility are children of the Command class. They all represent posible commands
+that can be used in the application. Each of them has a method that sets the command, meaning
+that it reads the input and stores the data in the object. The method run is also implemented
+in each of them. It is used to execute the command. The method run is called from the main class.
+    The flow of the app:
+    The main method reads the input file and stores the data in a list of commands. Then the data
+base of the application is created.(the initialisation of the player object). After that, each
+command from the list is executed. The parsing of the commands is done with the help of the
+switch statement.
+    Search: for each type of input(song, podcast, playlist) there is a specialized method that
+checks the type of filter/firters that was specified and calls the method that searches for that
+type of input. After each filter is applied the result is stored in a list that is returned at the
+end of the method. If more then one filter is specified, the result of the previous filter becomes
+the input for the next filter. At the end  the list is stored for each user in an Array and the
+method that prints the result is called.
+    Select: this method checks if a search was made before and if the result is not empty. After
+that it checks if the index is valid. If all conditions are met, the input is selected and the
+method that prints the result is called.
+    Load: this method checks if a search and a select was made before and if the result is not
+empty. If they are the timestamp for the beginning of the song is set and the method that prints
+the result is called.
+    PlayPause: this method changes the state of the input that was loaded from play to pause or
+from pause to play. Also the remaining time is updated. The method that prints the result is called.
+    Like: this method checks if a load was made before and if the input is a song. If all conditions
+are met, the song is added to the list of liked songs of the user and also to an array of songs in
+the player that will be later used to generate the most likes songs. The method that prints the
+result is called.
+    CreatePlaylist: this method crates a new playlist and adds it to the list of playlists of the
+user, but also to an array of playlists in the player. The method that prints the result is called.
+    AddRemoveInPlaylist: this method adds the loaded song to the playlist specified by the user.
+If the song is already in the playlist, it is removed. The method that prints the result is called.
+    ShowPlaylists: this method displays all the playlists created by the user. The method that prints
+the result is called.
+    GetTop5Playlists: this method generates a list of the top 5 playlists based on the number of
+followers. To generate that list, the playlists are sorted in descending order based on the number
+of followers and the first 5 are selected. The method that prints the result is called.
+    GetTop5Songs: this method generates a list of the top 5 songs based on the number of likes. To
+generate that list, the songs are sorted in descending order based on the number of likes and the
+first 5 are selected. If the are not enough liked songs. the list is completed with songs from the
+library. The method that prints the result is called.
+    Follow: this method checks if the playlist specified by the user exists and if it does, the
+user is added to the list of followers of that playlist. The method that prints the result is called.
+    ShowPrefferredSongs: this method generates a list of the songs that were liked by the user. The
+method that prints the result is called.
+    Status: this method displays the current state of the user meaning the song/podcast episod that
+is playing or was paused, the remaining time, if it is on repeat, it is on shuffle and if it is
+paused. The method that prints the result is called.
+    SwitchVisibility: this method checks if the playlist specified by the user exists and if it does,
+the visibility of the playlist is changed. The method that prints the result is called.
+    The classes Playlist, User, Library and Player are used to create the data base
