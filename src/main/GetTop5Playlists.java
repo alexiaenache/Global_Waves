@@ -11,8 +11,8 @@ public class GetTop5Playlists extends Command {
      * Method that sets the command
      */
     public void setGetTop5Playlists(final Command c) {
-        this.setCommand(c.getCommand());
-        this.setTimestamp(c.getTimestamp());
+        setCommand(c.getCommand());
+        setTimestamp(c.getTimestamp());
     }
     /**
      * Method that runs the command

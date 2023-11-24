@@ -11,22 +11,16 @@ public class AddRemoveInPlaylist extends  Command {
      * Method that sets the command
      */
     public void setAddRemoveInPlaylist(final Command comm) {
-        this.setCommand(comm.getCommand());
-        this.setUsername(comm.getUsername());
-        this.setTimestamp(comm.getTimestamp());
-        this.setPlaylistId(comm.getPlaylistId());
+        setCommand(comm.getCommand());
+        setUsername(comm.getUsername());
+        setTimestamp(comm.getTimestamp());
+        setPlaylistId(comm.getPlaylistId());
     }
     /**
      * Method that runs the command
      */
     public void run(final Player player) {
-        int n = player.getUsers().size();
-        UserClass user = null;
-        for (int i = 0; i < n; i++) {
-            if (this.getUsername().equals(player.getUsers().get(i).getUsername())) {
-                user = player.getUsers().get(i);
-            }
-        }
+        UserClass user = player.whichUser(getUsername());
         user.setLastTimestamp(Integer.valueOf(getTimestamp()));
         String message = "";
         boolean found = false;

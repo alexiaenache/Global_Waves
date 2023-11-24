@@ -182,104 +182,104 @@ public class UserClass {
          * Method that returns the last play
          */
 
-    public int getLastPlay() {
+        public int getLastPlay() {
         return lastPlay;
     }
-    /**
-     * Method that sets the last play
-     */
-    public void setLastPlay(final int lastPlay) {
+        /**
+         * Method that sets the last play
+         */
+        public void setLastPlay(final int lastPlay) {
         this.lastPlay = lastPlay;
     }
-    /**
-     * Method that sets the remained time
-     */
-    public void setRemainedTime(final int remainedTime) {
+        /**
+        * Method that sets the remained time
+        */
+        public void setRemainedTime(final int remainedTime) {
         this.remainedTime = remainedTime;
     }
-    /**
-     * Method that returns the state of the pause
-     */
+        /**
+        * Method that returns the state of the pause
+        */
 
-    public boolean isPaused() {
+        public boolean isPaused() {
         return paused;
     }
-    /**
-     * Method that sets the state of the pause
-     */
-    public void setPaused(final boolean paused) {
+        /**
+        * Method that sets the state of the pause
+        */
+        public void setPaused(final boolean paused) {
         this.paused = paused;
     }
-    /**
-     * Method that returns the state of the shuffle
-     */
-    public boolean isShuffle() {
+        /**
+        * Method that returns the state of the shuffle
+        */
+        public boolean isShuffle() {
         return shuffle;
     }
-    /**
-     * Method that sets the state of the shuffle
-     */
-    public void setShuffle(final boolean shuffle) {
+        /**
+        * Method that sets the state of the shuffle
+        */
+        public void setShuffle(final boolean shuffle) {
         this.shuffle = shuffle;
     }
-    /**
-     * Method that returns the state of the repeat
-     */
-    public int getRepeat() {
+        /**
+        * Method that returns the state of the repeat
+        */
+        public int getRepeat() {
         return repeat;
     }
-    /**
-     * Method that sets the state of the repeat
-     */
-    public void setRepeat(final int repeat) {
+        /**
+        * Method that sets the state of the repeat
+        */
+        public void setRepeat(final int repeat) {
         this.repeat = repeat;
     }
-    /**
-     * Method that returns the state of teh load
-     */
-    public boolean isSuccessfullLoad() {
+        /**
+        * Method that returns the state of teh load
+        */
+        public boolean isSuccessfullLoad() {
         return successfullLoad;
     }
-    /**
-     * Method that sets the state of the load
-     */
-    public void setSuccessfullLoad(final boolean successfullLoad) {
+        /**
+        * Method that sets the state of the load
+        */
+        public void setSuccessfullLoad(final boolean successfullLoad) {
         this.successfullLoad = successfullLoad;
     }
-    /**
-     * Method that returns the state of the select
-     */
-    public boolean isSuccessfulSelect() {
+        /**
+        * Method that returns the state of the select
+         */
+        public boolean isSuccessfulSelect() {
         return successfulSelect;
     }
-    /**
-     * Method that sets the state of the select
-     */
-    public void setSuccessfulSelect(final boolean successfulSelect) {
+        /**
+        * Method that sets the state of the select
+        */
+        public void setSuccessfulSelect(final boolean successfulSelect) {
         this.successfulSelect = successfulSelect;
     }
-    /**
-     * Method that returns the last timestamp
-     */
-    public int getLastTimestamp() {
+        /**
+        * Method that returns the last timestamp
+        */
+        public int getLastTimestamp() {
         return lastTimestamp;
     }
-    /**
-     * Method that sets the last timestamp
-     */
-    public void setLastTimestamp(final int lastTimestamp) {
+        /**
+         * Method that sets the last timestamp
+        */
+        public void setLastTimestamp(final int lastTimestamp) {
         this.lastTimestamp = lastTimestamp;
     }
-    /**
-     * Method that returns the searched podcasts
-     */
-    public void setSearchedPodcasts(final ArrayList<PodcastInput> searchedPodcasts) {
+        /**
+        * Method that returns the searched podcasts
+        */
+        public void setSearchedPodcasts(final ArrayList<PodcastInput> searchedPodcasts) {
         this.searchedPodcasts = searchedPodcasts;
-    }
+        }
 
-    /**
-     * Method that sets the searched podcasts
-     */
+        /**
+        * Method that sets the searched podcasts
+        */
         public void setSearchedSongs(final ArrayList<SongInput> searchedSongs) {
             this.searchedSongs = searchedSongs;
         }

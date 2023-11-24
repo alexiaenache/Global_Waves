@@ -13,11 +13,11 @@ public class Search extends Command {
      * Method that sets the command
      */
     public void setSearch(final Command comm) {
-        this.setCommand(comm.getCommand());
-        this.setUsername(comm.getUsername());
-        this.setTimestamp(comm.getTimestamp());
-        this.setType(comm.getType());
-        this.setFilters(comm.getFilters());
+        setCommand(comm.getCommand());
+        setUsername(comm.getUsername());
+        setTimestamp(comm.getTimestamp());
+        setType(comm.getType());
+        setFilters(comm.getFilters());
     }
     /**
      * Method that resets the search

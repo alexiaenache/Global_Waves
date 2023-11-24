@@ -1,6 +1,6 @@
 Starting audit...
-[ERROR] /home/student/Tema1.2/Tema1/./src/main/Player.java:162:39: Parameter name should be final. [FinalParameters]
-[ERROR] /home/student/Tema1.2/Tema1/./src/main/Player.java:340:57: 'users' hides a field. [HiddenField]
+[ERROR] /home/student/Tema1.2/Tema1/./src/main/Player.java:28:32: Parameter username should be final. [FinalParameters]
+[ERROR] /home/student/Tema1.2/Tema1/./src/main/Player.java:174:39: Parameter name should be final. [FinalParameters]
 [ERROR] /home/student/Tema1.2/Tema1/./src/main/Main.java:6:8: Unused import - com.fasterxml.jackson.databind.JsonNode. [UnusedImports]
 [ERROR] /home/student/Tema1.2/Tema1/./src/main/Main.java:10:8: Unused import - com.fasterxml.jackson.databind.node.ObjectNode. [UnusedImports]
 [ERROR] /home/student/Tema1.2/Tema1/./src/main/Main.java:13:15: Using the '.*' form of import should be avoided - java.io.*. [AvoidStarImport]

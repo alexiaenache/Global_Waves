@@ -11,9 +11,9 @@ public class Like extends Command {
      * Method that sets the command
      */
     public void setLike(final Command c) {
-        this.setCommand(c.getCommand());
-        this.setUsername(c.getUsername());
-        this.setTimestamp(c.getTimestamp());
+        setCommand(c.getCommand());
+        setUsername(c.getUsername());
+        setTimestamp(c.getTimestamp());
     }
     /**
      * Method that runs the command
@@ -27,13 +27,7 @@ public class Like extends Command {
             ArrayList<Integer> likes = new ArrayList<>();
             player.setLikes(likes);
         }
-        int n = player.getUsers().size();
-        UserClass user = null;
-        for (int i = 0; i < n; i++) {
-            if (this.getUsername().equals(player.getUsers().get(i).getUsername())) {
-                user = player.getUsers().get(i);
-            }
-        }
+        UserClass user = player.whichUser(getUsername());
         user.setLastTimestamp(Integer.valueOf(getTimestamp()));
         String message = "";
         boolean found = false;

@@ -73,7 +73,6 @@ public final class Main {
      */
     public static void action(final String filePathInput,
                               final String filePathOutput) throws IOException {
-//        if(!filePathInput.equals("test15_statistics.json")) return;
         ObjectMapper objectMapper = new ObjectMapper();
         LibraryInput library = objectMapper.readValue(new File(LIBRARY_PATH), LibraryInput.class);
         ArrayNode outputs = objectMapper.createArrayNode();

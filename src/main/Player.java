@@ -22,6 +22,19 @@ public class Player {
     private ArrayList<Integer> likes;
 
     /**
+     * this method returns the instance of the class user
+     * that has the selceted username
+     */
+    public UserClass whichUser(String username) {
+        for (UserClass user : users) {
+            if (user.getUsername().equals(username)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    /**
      * Method that returns the library
      */
     public LibraryInput getLib() {
@@ -38,29 +51,28 @@ public class Player {
      */
     public void setSerchedSongsUser(
             final String user, final ArrayList<SongInput> songs, final String timestamp) {
-        for (int i = 0; i < this.users.size(); i++) {
-            if (this.users.get(i).getUsername().equals(user)) {
-                this.users.get(i).setSearchedSongs(songs);
-                this.users.get(i).removeSearchedPodcasts();
-                this.users.get(i).setLastTimestamp(Integer.valueOf(timestamp));
-                this.addOutputSearchMapper(this.users.get(i));
-                users.get(i).setSearched(true);
-            }
+        UserClass u = whichUser(user);
+        if (u.getUsername().equals(user)) {
+            u.setSearchedSongs(songs);
+            u.removeSearchedPodcasts();
+            u.setLastTimestamp(Integer.valueOf(timestamp));
+            u.setSearched(true);
+            addOutputSearchMapper(u);
         }
+
     }
     /**
      * Method that sets the searched podcasts for a user
      */
     public void setSearchedPodcastsUser(
             final String user, final ArrayList<PodcastInput> podcasts, final String timestamp) {
-        for (int i = 0; i < this.users.size(); i++) {
-            if (this.users.get(i).getUsername().equals(user)) {
-                this.users.get(i).setSearchedPodcasts(podcasts);
-                this.users.get(i).removeSearchedSongs();
-                this.users.get(i).setLastTimestamp(Integer.valueOf(timestamp));
-                this.addOutputSearchMapper(this.users.get(i));
-                users.get(i).setSearched(true);
-            }
+        UserClass u = whichUser(user);
+        if (u.getUsername().equals(user)) {
+            u.setSearchedPodcasts(podcasts);
+            u.removeSearchedSongs();
+            u.setLastTimestamp(Integer.valueOf(timestamp));
+            u.setSearched(true);
+            addOutputSearchMapper(u);
         }
     }
     /**
@@ -68,7 +80,7 @@ public class Player {
      */
     public void
     addOutputSearchMapper(final UserClass user) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "search");
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
@@ -78,7 +90,7 @@ public class Player {
             for (SongInput song : user.getSearchedSongs()) {
                 songNames.add(song.getName());
             }
-            node.put("results", this.mapper.valueToTree(songNames));
+            node.put("results", mapper.valueToTree(songNames));
         } else if (user.getSearchedPodcasts() != null) {
             node.put("message", "Search returned "
                     + user.getSearchedPodcasts().size() + " results");
@@ -86,15 +98,15 @@ public class Player {
             for (PodcastInput podcast : user.getSearchedPodcasts()) {
                 podcastNames.add(podcast.getName());
             }
-            node.put("results", this.mapper.valueToTree(podcastNames));
+            node.put("results", mapper.valueToTree(podcastNames));
         }
-        this.output.add(node);
+        output.add(node);
     }
     /**
      * Method that that adds the output for the searched playlists
      */
     public void addOutputSearchPlaylistMapper(final UserClass user) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "search");
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
@@ -107,15 +119,15 @@ public class Player {
         for (Playlist playlist : user.getSearchedPlaylists()) {
             playlistNames.add(playlist.getName());
         }
-        node.put("results", this.mapper.valueToTree(playlistNames));
-        this.output.add(node);
+        node.put("results", mapper.valueToTree(playlistNames));
+        output.add(node);
     }
     /**
      * Method that adds the output for the select command
      */
     public void
     addOutputSelectMapper(final UserClass user, final boolean successfulSelect) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "select");
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
@@ -133,13 +145,13 @@ public class Player {
         }
         node.put("message", message);
         user.setSearched(false);
-        this.output.add(node);
+        output.add(node);
     }
     /**
      * Method that adds the output for the load command
      */
     public void addOutputLoadMapper(final UserClass user) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "load");
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
@@ -153,34 +165,34 @@ public class Player {
             user.setSuccessfullLoad(true);
         }
         node.put("message", message);
-        this.output.add(node);
+        output.add(node);
         }
         /**
          * Method that adds the output for the status command
          */
         public void addOutputStatusMapper(
                 final UserClass user, String name, final int remTime, final String repM) {
-            ObjectNode node = this.mapper.createObjectNode();
+            ObjectNode node = mapper.createObjectNode();
             node.put("command", "status");
             node.put("user", user.getUsername());
             node.put("timestamp", user.getLastTimestamp());
             if (remTime == 0) {
                 name = "";
             }
-            ObjectNode statsNode = this.mapper.createObjectNode();
+            ObjectNode statsNode = mapper.createObjectNode();
             statsNode.put("name", name);
             statsNode.put("remainedTime", remTime);
             statsNode.put("repeat", repM);
             statsNode.put("shuffle", user.isShuffle());
             statsNode.put("paused", user.isPaused());
             node.set("stats", statsNode);
-            this.output.add(node);
+            output.add(node);
     }
     /**
      * method that adds the output for the play/pause command
      */
     public void addOutputPlayPauseMapper(final UserClass user) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "playPause");
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
@@ -193,13 +205,13 @@ public class Player {
             message = "Playback resumed successfully.";
         }
         node.put("message", message);
-        this.output.add(node);
+        output.add(node);
     }
     /**
      * Method that adds the output for the create a playlist command
      */
     public void addOutputCreatePlaylist(final UserClass user, final boolean found) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "createPlaylist");
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
@@ -210,38 +222,38 @@ public class Player {
             message = "A playlist with the same name already exists.";
         }
         node.put("message", message);
-        this.output.add(node);
+        output.add(node);
     }
     /**
      * Method that adds the output for the add/remove in playlist command
      */
     public void
     addOutputAddRemoveInPlaylistMapper(final UserClass user, final String message) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "addRemoveInPlaylist");
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
         node.put("message", message);
-        this.output.add(node);
+        output.add(node);
     }
     /**
      * Method that adds the output for the show playlist command
      */
     public void addOutputShowPlaylistsMapper(final UserClass user) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "showPlaylists");
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
         ArrayList<ObjectNode> results = new ArrayList<>();
         for (Playlist playlist : user.getPlaylists()) {
-            ObjectNode playlistNode = this.mapper.createObjectNode();
+            ObjectNode playlistNode = mapper.createObjectNode();
             playlistNode.put("name", playlist.getName());
             String type = "";
             ArrayList<String> songNames = new ArrayList<>();
             for (SongInput song : playlist.getSongs()) {
                 songNames.add(song.getName());
             }
-            playlistNode.put("songs", this.mapper.valueToTree(songNames));
+            playlistNode.put("songs", mapper.valueToTree(songNames));
             if (playlist.isPublic()) {
                 type = "public";
             } else {
@@ -252,14 +264,14 @@ public class Player {
             results.add(playlistNode);
         }
 
-        node.set("result", this.mapper.valueToTree(results));
-        this.output.add(node);
+        node.set("result", mapper.valueToTree(results));
+        output.add(node);
     }
     /**
      * Method that adds the output for the show preferred songs command
      */
     public void addOutputShowPreferredSongsMapper(final UserClass user) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "showPreferredSongs");
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
@@ -269,81 +281,81 @@ public class Player {
                 results.add(song.getName());
             }
         }
-        node.put("result", this.mapper.valueToTree(results));
-        this.output.add(node);
+        node.put("result", mapper.valueToTree(results));
+        output.add(node);
     }
     /**
      * Method that adds the output for the like songs command
      */
     public void addOutputLikeMapper(final UserClass user, final String message) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "like");
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
         node.put("message", message);
-        this.output.add(node);
+        output.add(node);
     }
 
     /**
      * Method that adds the output for the follow playlist command
      */
     public void addOutputFollow(final UserClass user, final String message) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "follow");
         node.put("message", message);
         node.put("timestamp", user.getLastTimestamp());
         node.put("user", user.getUsername());
-        this.output.add(node);
+        output.add(node);
     }
     /**
      * Method that adds the output for the switch visibility command
      */
     public void addOutputSwitchVisibility(final UserClass user, final String message) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "switchVisibility");
         node.put("user", user.getUsername());
         node.put("timestamp", user.getLastTimestamp());
         node.put("message", message);
-        this.output.add(node);
+        output.add(node);
     }
     /**
      * Method that adds the output for the top 5 playlists command
      */
     public void addOutputTop5PlaylistsMapper(
             final Integer timestamp, final ArrayList<Playlist> top5Playlists) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "getTop5Playlists");
         ArrayList<String> results = new ArrayList<>();
 
         for (Playlist playlist : top5Playlists) {
             results.add(playlist.getName());
         }
-        node.put("result", this.mapper.valueToTree(results));
+        node.put("result", mapper.valueToTree(results));
         node.put("timestamp", timestamp);
-        this.output.add(node);
+        output.add(node);
     }
     /**
      * Method that adds the output for the top 5 songs command
      */
     public void addOutputTop5SongsMapper(
             final Integer integer, final ArrayList<String> top5Songs) {
-        ObjectNode node = this.mapper.createObjectNode();
+        ObjectNode node = mapper.createObjectNode();
         node.put("command", "getTop5Songs");
 
-        node.put("result", this.mapper.valueToTree(top5Songs));
+        node.put("result", mapper.valueToTree(top5Songs));
         node.put("timestamp", integer);
-        this.output.add(node);
+        output.add(node);
     }
     /**
      * Method that makes a deep copy of the users
      */
-    public void copyAllUsers(final ArrayList<UserInput> users) {
-        this.users = new ArrayList<>();
-        for (int i = 0; i < users.size(); i++) {
-            this.users.add(new UserClass());
-            this.users.get(i).setUsername(users.get(i).getUsername());
-            this.users.get(i).setAge(users.get(i).getAge());
-            this.users.get(i).setCity(users.get(i).getCity());
+    public void copyAllUsers(final ArrayList<UserInput> userss) {
+        users = new ArrayList<>();
+        for (int i = 0; i < userss.size(); i++) {
+            users.add(new UserClass());
+            users.get(i).setUsername(userss.get(i).getUsername());
+            users.get(i).setAge(userss.get(i).getAge());
+            users.get(i).setCity(userss.get(i).getCity());
         }
     }
    /**

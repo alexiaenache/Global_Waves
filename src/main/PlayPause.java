@@ -7,22 +7,15 @@ public class PlayPause extends Command {
      * Method that sets the command
      */
     public void setPlayPause(final Command c) {
-        this.setCommand(c.getCommand());
-        this.setUsername(c.getUsername());
-        this.setTimestamp(c.getTimestamp());
+        setCommand(c.getCommand());
+        setUsername(c.getUsername());
+        setTimestamp(c.getTimestamp());
     }
     /**
      * Method that runs the command
      */
     public void run(final Player player) {
-        int n = player.getUsers().size();
-        UserClass user = null;
-        for (int i = 0; i < n; i++) {
-            if (this.getUsername().equals(player.getUsers().get(i).getUsername())) {
-                user = player.getUsers().get(i);
-            }
-
-        }
+        UserClass user = player.whichUser(getUsername());
         if (user == null) {
             return;
         }
